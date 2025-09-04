@@ -1,56 +1,34 @@
-import { SupportedWallet, WalletId, WalletManager, WalletProvider } from '@txnlab/use-wallet-react'
-import { SnackbarProvider } from 'notistack'
-import Home from './Home'
-import { getAlgodConfigFromViteEnvironment, getKmdConfigFromViteEnvironment } from './utils/network/getAlgoClientConfigs'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { Toaster } from "sonner";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import StreamPage from "./pages/StreamPage";
+import DashboardPage from "./pages/DashboardPage";
+import { WalletProvider } from "./context/WalletContext";
 
-let supportedWallets: SupportedWallet[]
-if (import.meta.env.VITE_ALGOD_NETWORK === 'localnet') {
-  const kmdConfig = getKmdConfigFromViteEnvironment()
-  supportedWallets = [
-    {
-      id: WalletId.KMD,
-      options: {
-        baseServer: kmdConfig.server,
-        token: String(kmdConfig.token),
-        port: String(kmdConfig.port),
-      },
-    },
-  ]
-} else {
-  supportedWallets = [
-    { id: WalletId.DEFLY },
-    { id: WalletId.PERA },
-    { id: WalletId.EXODUS },
-    // If you are interested in WalletConnect v2 provider
-    // refer to https://github.com/TxnLab/use-wallet for detailed integration instructions
-  ]
-}
+const queryClient = new QueryClient();
 
-export default function App() {
-  const algodConfig = getAlgodConfigFromViteEnvironment()
-
-  const walletManager = new WalletManager({
-    wallets: supportedWallets,
-    defaultNetwork: algodConfig.network,
-    networks: {
-      [algodConfig.network]: {
-        algod: {
-          baseServer: algodConfig.server,
-          port: algodConfig.port,
-          token: String(algodConfig.token),
-        },
-      },
-    },
-    options: {
-      resetNetwork: true,
-    },
-  })
-
+function App() {
   return (
-    <SnackbarProvider maxSnack={3}>
-      <WalletProvider manager={walletManager}>
-        <Home />
+    <QueryClientProvider client={queryClient}>
+      <WalletProvider>
+        <Router>
+          <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+            <Navbar />
+            <main className="container mx-auto px-4 py-8">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/stream/:id" element={<StreamPage />} />
+                <Route path="/dashboard" element={<DashboardPage />} />
+              </Routes>
+            </main>
+          </div>
+          <Toaster richColors position="top-right" />
+        </Router>
       </WalletProvider>
-    </SnackbarProvider>
-  )
+    </QueryClientProvider>
+  );
 }
+
+export default App;

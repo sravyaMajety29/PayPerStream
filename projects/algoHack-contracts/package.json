@@ -7,7 +7,12 @@
     "build": "algokit compile ts smart_contracts --output-source-map --out-dir artifacts && algokit generate client smart_contracts/artifacts --output {app_spec_dir}/{contract_name}Client.ts",
     "deploy": "ts-node-dev --transpile-only --watch .env -r dotenv/config smart_contracts/index.ts",
     "deploy:ci": "ts-node --transpile-only -r dotenv/config smart_contracts/index.ts",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "test:watch": "vitest --watch",
+    "test-contract": "vitest run smart_contracts/paypersec/contract.spec.ts"
   },
   "engines": {
     "node": ">=22.0",
@@ -23,10 +28,12 @@
     "@algorandfoundation/puya-ts": "~1.0.0-beta.50 <1.0.0",
     "@rollup/plugin-typescript": "^12.1.2",
     "@tsconfig/node22": "^22.0.0",
+    "@vitest/ui": "^2.1.9",
     "algosdk": "^3.0.0",
     "dotenv": "^16.4.7",
     "ts-node-dev": "^2.0.0",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.9"
   },
   "overrides": {
     "esbuild": "0.25.0"
