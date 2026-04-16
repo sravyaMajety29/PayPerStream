@@ -1,0 +1,4398 @@
+{
+  "version": 3,
+  "sources": [
+    "/Users/shopup/Documents/personal-projects/algorand-hackathon/algoHack/projects/algoHack-contracts/smart_contracts/paypersec/contract.algo.ts"
+  ],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAeA;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;AAAA;;;;;;;;;;;;;;;;;;;;AAAA;;AA8KG;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;;AAAA;AAAA;;AAAA;;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AAtBA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AAAA;AAAA;AAAA;;;AAAA;;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;;;AAAA;AAAA;;AAAA;AAAA;;;;AAAA;;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAAA;;AATA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AATA;;AAAA;AAAA;AAAA;;AAAA;AAtIH;;;AAAA;AAAA;;AAsIG;;;AAAA;;AAvBA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AAnBA;;AAAA;AAAA;AAAA;;AAAA;AA5FH;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AA4FG;;;AAAA;;AA/BA;;AAAA;AAAA;AAAA;;AAAA;AAAA;;;AAAA;;AApBA;;AAAA;AAAA;AAAA;;AAAA;AAzCH;;AAAA;AAAA;AAAA;AAAA;;AAAA;AAAA;AAAA;AAyCG;;;AAAA;;AAlBA;;AAAA;AAAA;AAAA;;AAAA;AAvBH;;;AAAA;;;AAAA;;;AAAA;AAAA;;;AAAA;AAuBG;;;AAAA;;AAvBH;;AAAA;;;AAAA;;AAAA;AAAA;AAAA;;AAuBE;;;AAlBO;;AAoBwB;;AAA7B;AAnBK;;AAoBL;;AAAA;AAnBK;;AAoBL;;AAAA;AAnBK;AAoBL;;AAAA;AAnBK;AAoBqB;AAA1B;AAjBK;AAkBsB;AAA3B;AA5BK;;AAiC6B;;AAAlC;;AAMF;;;AAhCO;AAAA;AAAA;AAAA;AAkCL;AAnCK;AAAA;AAAA;AAAA;AAsC8C;AAA5B;AAGR;;AAAA;;AAAoB;;AAA5B;AAAP;AACe;;AAAA;;AAAR;;AAAA;AAAP;AAGwB;;AAtCnB;AAsCL;;AAAA;AAC4B;;AApCvB;;AAoC8C;;AAAnD;AAC6B;;AAvCxB;;AAuC+C;;AAApD;;AA9CK;AAAA;AAAA;AAAA;AAsDL;AAE2C;;AAAQ;AAlD9C;AAkD8C;AAAA;AACE;;AAAQ;AAlDxD;;AAkDwD;AAAA;AAE7D;;AAAA;AACc;;AAAmB;AAAkB;AAAlB;AAA1B;AAAP;AAGA;AAtEK;AAAA;;AAAA;AAAA;;;;;;;AAsEL;;;AAIS;;;AAJT;AA5DK;AAAA;AAAA;AAAA;AAqEuB;;AAAA;AArEvB;AAqEL;AAAA;AAC+D;;AAAQ;AAjElE;;AAiEkE;AAAA;AAAhD;;AAAiB;AAAA;;AAAA;AAjEnC;;AAiEL;AAAA;AAC6B;;AAnExB;;AAmE+C;;AAApD;AAGwB;;AAvEnB;AAuEmC;AAAxC;;AAMF;;;AAnFO;AAAA;AAAA;AAAA;AAqFL;AACmC;;AAAQ;AA7EtC;;AA6EsC;AAAA;AAA3C;AAvFK;AAAA;AAAA;AAAA;AA0F8C;AAA5B;AAGR;;AAAA;;AAAoB;;AAA5B;AAAP;AACe;;AAAA;;AAAR;;AAAA;AAAP;AAGwB;;AA1FnB;AA0FL;;AAAA;;AAMF;;;AAE6C;;AAAQ;AAlG9C;AAkG8C;AAAA;AAAA;AAAA;;AAAA;AAEnD;;;AAEE;AAEkB;;;;;;;;AAFlB;;;AAIS;;;AAJT;AAUsB;;AAhHnB;AAgHmC;AAAxC;AAC4B;;AA9GvB;;AA8GuC;AAA5C;;AAMF;;;AAEa;;AAnIN;AAAA;;AAAA;AAAA;AAmIE;AAAP;AAtIK;;AAuIL;;AAAA;;AAQW;;AA5IN;AAAA;;AAAA;AAAA;AA4IE;AAAP;AAxIK;AAyIqB;AAA1B;;AA5IK;AAAA;;AAAA;AAAA;AACA;AAAA;;AAAA;AAAA;AACA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AA6JyC;AAA5B;AAzJb;AAAA;AAAA;AAAA;AAHA;AAAA;AAAA;AAAA;AAwJL;AAaF;;;AAQuD;;AAAQ;AAtKxD;;AAsKwD;AAAA;AAAA;AAAA;;AAAA;AAC1C;;;AAA8B;;AAAmB;;AAAkB;AAAlB;AAA1B;AAAvB;;;;AAGmB;;AAAQ;AA3KzC;AA2KyC;AAAA;AAEV;;AAAQ;AA3KvC;;AA2KuC;AAAA;AACE;;AAAQ;AA3KjD;;AA2KiD;AAAA;AAJtD;;AAAA;;AAAA;;AAAA;;AAAA;;AAAA;;AAAA;;",
+  "op_pc_offset": 0,
+  "pc_events": {
+    "1": {
+      "subroutine": "@algorandfoundation/algorand-typescript/arc4/index.d.ts::Contract.approvalProgram",
+      "params": {},
+      "block": "main",
+      "stack_in": [],
+      "op": "intcblock 0 1 10"
+    },
+    "6": {
+      "op": "bytecblock \"userHeldAmount\" \"streamActive\" \"pricePerSecond\" \"totalEarnings\" \"userWatchStartTime\" \"userLastPaymentTime\" \"streamOwner\" \"paymentRecipient\" \"userTotalPaid\" 0x151f7c75 \"streamTitle\" \"streamDuration\""
+    },
+    "179": {
+      "op": "txn NumAppArgs",
+      "defined_out": [
+        "tmp%0#1"
+      ],
+      "stack_out": [
+        "tmp%0#1"
+      ]
+    },
+    "181": {
+      "op": "bz main_bare_routing@14",
+      "stack_out": []
+    },
+    "184": {
+      "op": "pushbytess 0x731bf01a 0x64c979a5 0x1af661a1 0x812388d5 0x2862491e 0xebdaf4b5 0xb8661a82 0x10572b8a 0x00b9794b // method \"initializeStream(string,uint64,uint64)void\", method \"startStreaming(pay)void\", method \"processInterval()void\", method \"continueStreaming(pay)void\", method \"stopStreaming()void\", method \"updatePaymentRecipient(account)void\", method \"emergencyStop()void\", method \"getStreamInfo()(string,uint64,uint64,uint64,uint64,bool)\", method \"getUserStreamingInfo()(uint64,uint64,uint64,uint64,bool)\"",
+      "defined_out": [
+        "Method(continueStreaming(pay)void)",
+        "Method(emergencyStop()void)",
+        "Method(getStreamInfo()(string,uint64,uint64,uint64,uint64,bool))",
+        "Method(getUserStreamingInfo()(uint64,uint64,uint64,uint64,bool))",
+        "Method(initializeStream(string,uint64,uint64)void)",
+        "Method(processInterval()void)",
+        "Method(startStreaming(pay)void)",
+        "Method(stopStreaming()void)",
+        "Method(updatePaymentRecipient(account)void)"
+      ],
+      "stack_out": [
+        "Method(initializeStream(string,uint64,uint64)void)",
+        "Method(startStreaming(pay)void)",
+        "Method(processInterval()void)",
+        "Method(continueStreaming(pay)void)",
+        "Method(stopStreaming()void)",
+        "Method(updatePaymentRecipient(account)void)",
+        "Method(emergencyStop()void)",
+        "Method(getStreamInfo()(string,uint64,uint64,uint64,uint64,bool))",
+        "Method(getUserStreamingInfo()(uint64,uint64,uint64,uint64,bool))"
+      ]
+    },
+    "231": {
+      "op": "txna ApplicationArgs 0",
+      "defined_out": [
+        "Method(continueStreaming(pay)void)",
+        "Method(emergencyStop()void)",
+        "Method(getStreamInfo()(string,uint64,uint64,uint64,uint64,bool))",
+        "Method(getUserStreamingInfo()(uint64,uint64,uint64,uint64,bool))",
+        "Method(initializeStream(string,uint64,uint64)void)",
+        "Method(processInterval()void)",
+        "Method(startStreaming(pay)void)",
+        "Method(stopStreaming()void)",
+        "Method(updatePaymentRecipient(account)void)",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "Method(initializeStream(string,uint64,uint64)void)",
+        "Method(startStreaming(pay)void)",
+        "Method(processInterval()void)",
+        "Method(continueStreaming(pay)void)",
+        "Method(stopStreaming()void)",
+        "Method(updatePaymentRecipient(account)void)",
+        "Method(emergencyStop()void)",
+        "Method(getStreamInfo()(string,uint64,uint64,uint64,uint64,bool))",
+        "Method(getUserStreamingInfo()(uint64,uint64,uint64,uint64,bool))",
+        "tmp%2#0"
+      ]
+    },
+    "234": {
+      "op": "match main_initializeStream_route@3 main_startStreaming_route@4 main_processInterval_route@5 main_continueStreaming_route@6 main_stopStreaming_route@7 main_updatePaymentRecipient_route@8 main_emergencyStop_route@9 main_getStreamInfo_route@10 main_getUserStreamingInfo_route@11",
+      "stack_out": []
+    },
+    "254": {
+      "block": "main_after_if_else@18",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "255": {
+      "op": "return",
+      "stack_out": []
+    },
+    "256": {
+      "block": "main_getUserStreamingInfo_route@11",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%44#0"
+      ],
+      "stack_out": [
+        "tmp%44#0"
+      ]
+    },
+    "258": {
+      "op": "!",
+      "defined_out": [
+        "tmp%45#0"
+      ],
+      "stack_out": [
+        "tmp%45#0"
+      ]
+    },
+    "259": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "260": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%46#0"
+      ],
+      "stack_out": [
+        "tmp%46#0"
+      ]
+    },
+    "262": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "263": {
+      "callsub": "smart_contracts/paypersec/contract.algo.ts::TapToStream.getUserStreamingInfo",
+      "op": "callsub getUserStreamingInfo",
+      "defined_out": [
+        "elements_to_encode%10#0",
+        "elements_to_encode%6#0",
+        "elements_to_encode%7#0",
+        "elements_to_encode%8#0",
+        "elements_to_encode%9#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%6#0",
+        "elements_to_encode%7#0",
+        "elements_to_encode%8#0",
+        "elements_to_encode%9#0",
+        "elements_to_encode%10#0"
+      ]
+    },
+    "266": {
+      "op": "uncover 4",
+      "stack_out": [
+        "elements_to_encode%7#0",
+        "elements_to_encode%8#0",
+        "elements_to_encode%9#0",
+        "elements_to_encode%10#0",
+        "elements_to_encode%6#0"
+      ]
+    },
+    "268": {
+      "op": "itob",
+      "defined_out": [
+        "elements_to_encode%10#0",
+        "elements_to_encode%7#0",
+        "elements_to_encode%8#0",
+        "elements_to_encode%9#0",
+        "val_as_bytes%4#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%7#0",
+        "elements_to_encode%8#0",
+        "elements_to_encode%9#0",
+        "elements_to_encode%10#0",
+        "val_as_bytes%4#0"
+      ]
+    },
+    "269": {
+      "op": "uncover 4",
+      "stack_out": [
+        "elements_to_encode%8#0",
+        "elements_to_encode%9#0",
+        "elements_to_encode%10#0",
+        "val_as_bytes%4#0",
+        "elements_to_encode%7#0"
+      ]
+    },
+    "271": {
+      "op": "itob",
+      "defined_out": [
+        "elements_to_encode%10#0",
+        "elements_to_encode%8#0",
+        "elements_to_encode%9#0",
+        "val_as_bytes%4#0",
+        "val_as_bytes%5#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%8#0",
+        "elements_to_encode%9#0",
+        "elements_to_encode%10#0",
+        "val_as_bytes%4#0",
+        "val_as_bytes%5#0"
+      ]
+    },
+    "272": {
+      "op": "uncover 4",
+      "stack_out": [
+        "elements_to_encode%9#0",
+        "elements_to_encode%10#0",
+        "val_as_bytes%4#0",
+        "val_as_bytes%5#0",
+        "elements_to_encode%8#0"
+      ]
+    },
+    "274": {
+      "op": "itob",
+      "defined_out": [
+        "elements_to_encode%10#0",
+        "elements_to_encode%9#0",
+        "val_as_bytes%4#0",
+        "val_as_bytes%5#0",
+        "val_as_bytes%6#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%9#0",
+        "elements_to_encode%10#0",
+        "val_as_bytes%4#0",
+        "val_as_bytes%5#0",
+        "val_as_bytes%6#0"
+      ]
+    },
+    "275": {
+      "op": "uncover 4",
+      "stack_out": [
+        "elements_to_encode%10#0",
+        "val_as_bytes%4#0",
+        "val_as_bytes%5#0",
+        "val_as_bytes%6#0",
+        "elements_to_encode%9#0"
+      ]
+    },
+    "277": {
+      "op": "itob",
+      "defined_out": [
+        "elements_to_encode%10#0",
+        "val_as_bytes%4#0",
+        "val_as_bytes%5#0",
+        "val_as_bytes%6#0",
+        "val_as_bytes%7#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%10#0",
+        "val_as_bytes%4#0",
+        "val_as_bytes%5#0",
+        "val_as_bytes%6#0",
+        "val_as_bytes%7#0"
+      ]
+    },
+    "278": {
+      "op": "pushbytes 0x00",
+      "defined_out": [
+        "0x00",
+        "elements_to_encode%10#0",
+        "val_as_bytes%4#0",
+        "val_as_bytes%5#0",
+        "val_as_bytes%6#0",
+        "val_as_bytes%7#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%10#0",
+        "val_as_bytes%4#0",
+        "val_as_bytes%5#0",
+        "val_as_bytes%6#0",
+        "val_as_bytes%7#0",
+        "0x00"
+      ]
+    },
+    "281": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "0x00",
+        "elements_to_encode%10#0",
+        "val_as_bytes%4#0",
+        "val_as_bytes%5#0",
+        "val_as_bytes%6#0",
+        "val_as_bytes%7#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%10#0",
+        "val_as_bytes%4#0",
+        "val_as_bytes%5#0",
+        "val_as_bytes%6#0",
+        "val_as_bytes%7#0",
+        "0x00",
+        "0"
+      ]
+    },
+    "282": {
+      "op": "uncover 6",
+      "stack_out": [
+        "val_as_bytes%4#0",
+        "val_as_bytes%5#0",
+        "val_as_bytes%6#0",
+        "val_as_bytes%7#0",
+        "0x00",
+        "0",
+        "elements_to_encode%10#0"
+      ]
+    },
+    "284": {
+      "op": "setbit",
+      "defined_out": [
+        "encoded_bool%1#0",
+        "val_as_bytes%4#0",
+        "val_as_bytes%5#0",
+        "val_as_bytes%6#0",
+        "val_as_bytes%7#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%4#0",
+        "val_as_bytes%5#0",
+        "val_as_bytes%6#0",
+        "val_as_bytes%7#0",
+        "encoded_bool%1#0"
+      ]
+    },
+    "285": {
+      "op": "uncover 4",
+      "stack_out": [
+        "val_as_bytes%5#0",
+        "val_as_bytes%6#0",
+        "val_as_bytes%7#0",
+        "encoded_bool%1#0",
+        "val_as_bytes%4#0"
+      ]
+    },
+    "287": {
+      "op": "uncover 4",
+      "stack_out": [
+        "val_as_bytes%6#0",
+        "val_as_bytes%7#0",
+        "encoded_bool%1#0",
+        "val_as_bytes%4#0",
+        "val_as_bytes%5#0"
+      ]
+    },
+    "289": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_bool%1#0",
+        "encoded_tuple_buffer%10#0",
+        "val_as_bytes%6#0",
+        "val_as_bytes%7#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%6#0",
+        "val_as_bytes%7#0",
+        "encoded_bool%1#0",
+        "encoded_tuple_buffer%10#0"
+      ]
+    },
+    "290": {
+      "op": "uncover 3",
+      "stack_out": [
+        "val_as_bytes%7#0",
+        "encoded_bool%1#0",
+        "encoded_tuple_buffer%10#0",
+        "val_as_bytes%6#0"
+      ]
+    },
+    "292": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_bool%1#0",
+        "encoded_tuple_buffer%11#0",
+        "val_as_bytes%7#0"
+      ],
+      "stack_out": [
+        "val_as_bytes%7#0",
+        "encoded_bool%1#0",
+        "encoded_tuple_buffer%11#0"
+      ]
+    },
+    "293": {
+      "op": "uncover 2",
+      "stack_out": [
+        "encoded_bool%1#0",
+        "encoded_tuple_buffer%11#0",
+        "val_as_bytes%7#0"
+      ]
+    },
+    "295": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_bool%1#0",
+        "encoded_tuple_buffer%12#0"
+      ],
+      "stack_out": [
+        "encoded_bool%1#0",
+        "encoded_tuple_buffer%12#0"
+      ]
+    },
+    "296": {
+      "op": "swap",
+      "stack_out": [
+        "encoded_tuple_buffer%12#0",
+        "encoded_bool%1#0"
+      ]
+    },
+    "297": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%13#0"
+      ],
+      "stack_out": [
+        "encoded_tuple_buffer%13#0"
+      ]
+    },
+    "298": {
+      "op": "bytec 9 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_tuple_buffer%13#0"
+      ],
+      "stack_out": [
+        "encoded_tuple_buffer%13#0",
+        "0x151f7c75"
+      ]
+    },
+    "300": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_tuple_buffer%13#0"
+      ]
+    },
+    "301": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%48#0"
+      ],
+      "stack_out": [
+        "tmp%48#0"
+      ]
+    },
+    "302": {
+      "op": "log",
+      "stack_out": []
+    },
+    "303": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "304": {
+      "op": "return",
+      "stack_out": []
+    },
+    "305": {
+      "block": "main_getStreamInfo_route@10",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%39#0"
+      ],
+      "stack_out": [
+        "tmp%39#0"
+      ]
+    },
+    "307": {
+      "op": "!",
+      "defined_out": [
+        "tmp%40#0"
+      ],
+      "stack_out": [
+        "tmp%40#0"
+      ]
+    },
+    "308": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "309": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%41#0"
+      ],
+      "stack_out": [
+        "tmp%41#0"
+      ]
+    },
+    "311": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "312": {
+      "callsub": "smart_contracts/paypersec/contract.algo.ts::TapToStream.getStreamInfo",
+      "op": "callsub getStreamInfo",
+      "defined_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "elements_to_encode%5#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "elements_to_encode%5#0"
+      ]
+    },
+    "315": {
+      "op": "dig 5",
+      "defined_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%0#0 (copy)",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "elements_to_encode%5#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "elements_to_encode%5#0",
+        "elements_to_encode%0#0 (copy)"
+      ]
+    },
+    "317": {
+      "op": "len",
+      "defined_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "elements_to_encode%5#0",
+        "length%0#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "elements_to_encode%5#0",
+        "length%0#0"
+      ]
+    },
+    "318": {
+      "op": "itob",
+      "defined_out": [
+        "as_bytes%0#0",
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "elements_to_encode%5#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "elements_to_encode%5#0",
+        "as_bytes%0#0"
+      ]
+    },
+    "319": {
+      "op": "extract 6 2",
+      "defined_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "elements_to_encode%5#0",
+        "length_uint16%0#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%0#0",
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "elements_to_encode%5#0",
+        "length_uint16%0#0"
+      ]
+    },
+    "322": {
+      "op": "uncover 6",
+      "stack_out": [
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "elements_to_encode%5#0",
+        "length_uint16%0#0",
+        "elements_to_encode%0#0"
+      ]
+    },
+    "324": {
+      "op": "concat",
+      "defined_out": [
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "elements_to_encode%5#0",
+        "encoded_value%0#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%1#0",
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "elements_to_encode%5#0",
+        "encoded_value%0#0"
+      ]
+    },
+    "325": {
+      "op": "uncover 5",
+      "stack_out": [
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "elements_to_encode%5#0",
+        "encoded_value%0#0",
+        "elements_to_encode%1#0"
+      ]
+    },
+    "327": {
+      "op": "itob",
+      "defined_out": [
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "elements_to_encode%5#0",
+        "encoded_value%0#0",
+        "val_as_bytes%0#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%2#0",
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "elements_to_encode%5#0",
+        "encoded_value%0#0",
+        "val_as_bytes%0#0"
+      ]
+    },
+    "328": {
+      "op": "uncover 5",
+      "stack_out": [
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "elements_to_encode%5#0",
+        "encoded_value%0#0",
+        "val_as_bytes%0#0",
+        "elements_to_encode%2#0"
+      ]
+    },
+    "330": {
+      "op": "itob",
+      "defined_out": [
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "elements_to_encode%5#0",
+        "encoded_value%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%3#0",
+        "elements_to_encode%4#0",
+        "elements_to_encode%5#0",
+        "encoded_value%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "331": {
+      "op": "uncover 5",
+      "stack_out": [
+        "elements_to_encode%4#0",
+        "elements_to_encode%5#0",
+        "encoded_value%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "elements_to_encode%3#0"
+      ]
+    },
+    "333": {
+      "op": "itob",
+      "defined_out": [
+        "elements_to_encode%4#0",
+        "elements_to_encode%5#0",
+        "encoded_value%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%4#0",
+        "elements_to_encode%5#0",
+        "encoded_value%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0"
+      ]
+    },
+    "334": {
+      "op": "uncover 5",
+      "stack_out": [
+        "elements_to_encode%5#0",
+        "encoded_value%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "elements_to_encode%4#0"
+      ]
+    },
+    "336": {
+      "op": "itob",
+      "defined_out": [
+        "elements_to_encode%5#0",
+        "encoded_value%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%5#0",
+        "encoded_value%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0"
+      ]
+    },
+    "337": {
+      "op": "pushbytes 0x00",
+      "defined_out": [
+        "0x00",
+        "elements_to_encode%5#0",
+        "encoded_value%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%5#0",
+        "encoded_value%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0",
+        "0x00"
+      ]
+    },
+    "340": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "0x00",
+        "elements_to_encode%5#0",
+        "encoded_value%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0"
+      ],
+      "stack_out": [
+        "elements_to_encode%5#0",
+        "encoded_value%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0",
+        "0x00",
+        "0"
+      ]
+    },
+    "341": {
+      "op": "uncover 7",
+      "stack_out": [
+        "encoded_value%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0",
+        "0x00",
+        "0",
+        "elements_to_encode%5#0"
+      ]
+    },
+    "343": {
+      "op": "setbit",
+      "defined_out": [
+        "encoded_bool%0#0",
+        "encoded_value%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0",
+        "encoded_bool%0#0"
+      ]
+    },
+    "344": {
+      "op": "pushbytes 0x0023",
+      "defined_out": [
+        "0x0023",
+        "encoded_bool%0#0",
+        "encoded_value%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "val_as_bytes%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0",
+        "encoded_bool%0#0",
+        "0x0023"
+      ]
+    },
+    "348": {
+      "op": "uncover 5",
+      "stack_out": [
+        "encoded_value%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0",
+        "encoded_bool%0#0",
+        "0x0023",
+        "val_as_bytes%0#0"
+      ]
+    },
+    "350": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_bool%0#0",
+        "encoded_tuple_buffer%2#0",
+        "encoded_value%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "val_as_bytes%1#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0",
+        "encoded_bool%0#0",
+        "encoded_tuple_buffer%2#0"
+      ]
+    },
+    "351": {
+      "op": "uncover 4",
+      "stack_out": [
+        "encoded_value%0#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0",
+        "encoded_bool%0#0",
+        "encoded_tuple_buffer%2#0",
+        "val_as_bytes%1#0"
+      ]
+    },
+    "353": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_bool%0#0",
+        "encoded_tuple_buffer%3#0",
+        "encoded_value%0#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "val_as_bytes%2#0",
+        "val_as_bytes%3#0",
+        "encoded_bool%0#0",
+        "encoded_tuple_buffer%3#0"
+      ]
+    },
+    "354": {
+      "op": "uncover 3",
+      "stack_out": [
+        "encoded_value%0#0",
+        "val_as_bytes%3#0",
+        "encoded_bool%0#0",
+        "encoded_tuple_buffer%3#0",
+        "val_as_bytes%2#0"
+      ]
+    },
+    "356": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_bool%0#0",
+        "encoded_tuple_buffer%4#0",
+        "encoded_value%0#0",
+        "val_as_bytes%3#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "val_as_bytes%3#0",
+        "encoded_bool%0#0",
+        "encoded_tuple_buffer%4#0"
+      ]
+    },
+    "357": {
+      "op": "uncover 2",
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_bool%0#0",
+        "encoded_tuple_buffer%4#0",
+        "val_as_bytes%3#0"
+      ]
+    },
+    "359": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_bool%0#0",
+        "encoded_tuple_buffer%5#0",
+        "encoded_value%0#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_bool%0#0",
+        "encoded_tuple_buffer%5#0"
+      ]
+    },
+    "360": {
+      "op": "swap",
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_tuple_buffer%5#0",
+        "encoded_bool%0#0"
+      ]
+    },
+    "361": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%6#0",
+        "encoded_value%0#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "encoded_tuple_buffer%6#0"
+      ]
+    },
+    "362": {
+      "op": "swap",
+      "stack_out": [
+        "encoded_tuple_buffer%6#0",
+        "encoded_value%0#0"
+      ]
+    },
+    "363": {
+      "op": "concat",
+      "defined_out": [
+        "encoded_tuple_buffer%7#0"
+      ],
+      "stack_out": [
+        "encoded_tuple_buffer%7#0"
+      ]
+    },
+    "364": {
+      "op": "bytec 9 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "encoded_tuple_buffer%7#0"
+      ],
+      "stack_out": [
+        "encoded_tuple_buffer%7#0",
+        "0x151f7c75"
+      ]
+    },
+    "366": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "encoded_tuple_buffer%7#0"
+      ]
+    },
+    "367": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%43#0"
+      ],
+      "stack_out": [
+        "tmp%43#0"
+      ]
+    },
+    "368": {
+      "op": "log",
+      "stack_out": []
+    },
+    "369": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "370": {
+      "op": "return",
+      "stack_out": []
+    },
+    "371": {
+      "block": "main_emergencyStop_route@9",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%35#0"
+      ],
+      "stack_out": [
+        "tmp%35#0"
+      ]
+    },
+    "373": {
+      "op": "!",
+      "defined_out": [
+        "tmp%36#0"
+      ],
+      "stack_out": [
+        "tmp%36#0"
+      ]
+    },
+    "374": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "375": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%37#0"
+      ],
+      "stack_out": [
+        "tmp%37#0"
+      ]
+    },
+    "377": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "378": {
+      "callsub": "smart_contracts/paypersec/contract.algo.ts::TapToStream.emergencyStop",
+      "op": "callsub emergencyStop"
+    },
+    "381": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "382": {
+      "op": "return",
+      "stack_out": []
+    },
+    "383": {
+      "block": "main_updatePaymentRecipient_route@8",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%29#0"
+      ],
+      "stack_out": [
+        "tmp%29#0"
+      ]
+    },
+    "385": {
+      "op": "!",
+      "defined_out": [
+        "tmp%30#0"
+      ],
+      "stack_out": [
+        "tmp%30#0"
+      ]
+    },
+    "386": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "387": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%31#0"
+      ],
+      "stack_out": [
+        "tmp%31#0"
+      ]
+    },
+    "389": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "390": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[1]%0#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[1]%0#0"
+      ]
+    },
+    "393": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%33#0"
+      ],
+      "stack_out": [
+        "tmp%33#0"
+      ]
+    },
+    "394": {
+      "op": "txnas Accounts",
+      "defined_out": [
+        "tmp%34#0"
+      ],
+      "stack_out": [
+        "tmp%34#0"
+      ]
+    },
+    "396": {
+      "callsub": "smart_contracts/paypersec/contract.algo.ts::TapToStream.updatePaymentRecipient",
+      "op": "callsub updatePaymentRecipient",
+      "stack_out": []
+    },
+    "399": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "400": {
+      "op": "return",
+      "stack_out": []
+    },
+    "401": {
+      "block": "main_stopStreaming_route@7",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%25#0"
+      ],
+      "stack_out": [
+        "tmp%25#0"
+      ]
+    },
+    "403": {
+      "op": "!",
+      "defined_out": [
+        "tmp%26#0"
+      ],
+      "stack_out": [
+        "tmp%26#0"
+      ]
+    },
+    "404": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "405": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%27#0"
+      ],
+      "stack_out": [
+        "tmp%27#0"
+      ]
+    },
+    "407": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "408": {
+      "callsub": "smart_contracts/paypersec/contract.algo.ts::TapToStream.stopStreaming",
+      "op": "callsub stopStreaming"
+    },
+    "411": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "412": {
+      "op": "return",
+      "stack_out": []
+    },
+    "413": {
+      "block": "main_continueStreaming_route@6",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%20#0"
+      ],
+      "stack_out": [
+        "tmp%20#0"
+      ]
+    },
+    "415": {
+      "op": "!",
+      "defined_out": [
+        "tmp%21#0"
+      ],
+      "stack_out": [
+        "tmp%21#0"
+      ]
+    },
+    "416": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "417": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%22#0"
+      ],
+      "stack_out": [
+        "tmp%22#0"
+      ]
+    },
+    "419": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "420": {
+      "op": "txn GroupIndex",
+      "defined_out": [
+        "tmp%24#0"
+      ],
+      "stack_out": [
+        "tmp%24#0"
+      ]
+    },
+    "422": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "tmp%24#0"
+      ],
+      "stack_out": [
+        "tmp%24#0",
+        "1"
+      ]
+    },
+    "423": {
+      "op": "-",
+      "defined_out": [
+        "gtxn_idx%1#0"
+      ],
+      "stack_out": [
+        "gtxn_idx%1#0"
+      ]
+    },
+    "424": {
+      "op": "dup",
+      "defined_out": [
+        "gtxn_idx%1#0",
+        "gtxn_idx%1#0 (copy)"
+      ],
+      "stack_out": [
+        "gtxn_idx%1#0",
+        "gtxn_idx%1#0 (copy)"
+      ]
+    },
+    "425": {
+      "op": "gtxns TypeEnum",
+      "defined_out": [
+        "gtxn_idx%1#0",
+        "gtxn_type%1#0"
+      ],
+      "stack_out": [
+        "gtxn_idx%1#0",
+        "gtxn_type%1#0"
+      ]
+    },
+    "427": {
+      "op": "intc_1 // pay",
+      "defined_out": [
+        "gtxn_idx%1#0",
+        "gtxn_type%1#0",
+        "pay"
+      ],
+      "stack_out": [
+        "gtxn_idx%1#0",
+        "gtxn_type%1#0",
+        "pay"
+      ]
+    },
+    "428": {
+      "op": "==",
+      "defined_out": [
+        "gtxn_idx%1#0",
+        "gtxn_type_matches%1#0"
+      ],
+      "stack_out": [
+        "gtxn_idx%1#0",
+        "gtxn_type_matches%1#0"
+      ]
+    },
+    "429": {
+      "error": "transaction type is pay",
+      "op": "assert // transaction type is pay",
+      "stack_out": [
+        "gtxn_idx%1#0"
+      ]
+    },
+    "430": {
+      "callsub": "smart_contracts/paypersec/contract.algo.ts::TapToStream.continueStreaming",
+      "op": "callsub continueStreaming",
+      "stack_out": []
+    },
+    "433": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "434": {
+      "op": "return",
+      "stack_out": []
+    },
+    "435": {
+      "block": "main_processInterval_route@5",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%16#0"
+      ],
+      "stack_out": [
+        "tmp%16#0"
+      ]
+    },
+    "437": {
+      "op": "!",
+      "defined_out": [
+        "tmp%17#0"
+      ],
+      "stack_out": [
+        "tmp%17#0"
+      ]
+    },
+    "438": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "439": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%18#0"
+      ],
+      "stack_out": [
+        "tmp%18#0"
+      ]
+    },
+    "441": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "442": {
+      "callsub": "smart_contracts/paypersec/contract.algo.ts::TapToStream.processInterval",
+      "op": "callsub processInterval"
+    },
+    "445": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "446": {
+      "op": "return",
+      "stack_out": []
+    },
+    "447": {
+      "block": "main_startStreaming_route@4",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%11#0"
+      ],
+      "stack_out": [
+        "tmp%11#0"
+      ]
+    },
+    "449": {
+      "op": "!",
+      "defined_out": [
+        "tmp%12#0"
+      ],
+      "stack_out": [
+        "tmp%12#0"
+      ]
+    },
+    "450": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "451": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%13#0"
+      ],
+      "stack_out": [
+        "tmp%13#0"
+      ]
+    },
+    "453": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "454": {
+      "op": "txn GroupIndex",
+      "defined_out": [
+        "tmp%15#0"
+      ],
+      "stack_out": [
+        "tmp%15#0"
+      ]
+    },
+    "456": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "tmp%15#0"
+      ],
+      "stack_out": [
+        "tmp%15#0",
+        "1"
+      ]
+    },
+    "457": {
+      "op": "-",
+      "defined_out": [
+        "gtxn_idx%0#0"
+      ],
+      "stack_out": [
+        "gtxn_idx%0#0"
+      ]
+    },
+    "458": {
+      "op": "dup",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "gtxn_idx%0#0 (copy)"
+      ],
+      "stack_out": [
+        "gtxn_idx%0#0",
+        "gtxn_idx%0#0 (copy)"
+      ]
+    },
+    "459": {
+      "op": "gtxns TypeEnum",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type%0#0"
+      ],
+      "stack_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type%0#0"
+      ]
+    },
+    "461": {
+      "op": "intc_1 // pay",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type%0#0",
+        "pay"
+      ],
+      "stack_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type%0#0",
+        "pay"
+      ]
+    },
+    "462": {
+      "op": "==",
+      "defined_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type_matches%0#0"
+      ],
+      "stack_out": [
+        "gtxn_idx%0#0",
+        "gtxn_type_matches%0#0"
+      ]
+    },
+    "463": {
+      "error": "transaction type is pay",
+      "op": "assert // transaction type is pay",
+      "stack_out": [
+        "gtxn_idx%0#0"
+      ]
+    },
+    "464": {
+      "callsub": "smart_contracts/paypersec/contract.algo.ts::TapToStream.startStreaming",
+      "op": "callsub startStreaming",
+      "stack_out": []
+    },
+    "467": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "468": {
+      "op": "return",
+      "stack_out": []
+    },
+    "469": {
+      "block": "main_initializeStream_route@3",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tmp%3#0"
+      ]
+    },
+    "471": {
+      "op": "!",
+      "defined_out": [
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tmp%4#0"
+      ]
+    },
+    "472": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "473": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tmp%5#0"
+      ]
+    },
+    "475": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "476": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "479": {
+      "op": "extract 2 0",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "482": {
+      "op": "txna ApplicationArgs 2",
+      "defined_out": [
+        "reinterpret_bytes[8]%0#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "reinterpret_bytes[8]%0#0"
+      ]
+    },
+    "485": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%8#0",
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "tmp%9#0"
+      ]
+    },
+    "486": {
+      "op": "txna ApplicationArgs 3",
+      "defined_out": [
+        "reinterpret_bytes[8]%1#0",
+        "tmp%8#0",
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "tmp%9#0",
+        "reinterpret_bytes[8]%1#0"
+      ]
+    },
+    "489": {
+      "op": "btoi",
+      "defined_out": [
+        "tmp%10#0",
+        "tmp%8#0",
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "tmp%9#0",
+        "tmp%10#0"
+      ]
+    },
+    "490": {
+      "callsub": "smart_contracts/paypersec/contract.algo.ts::TapToStream.initializeStream",
+      "op": "callsub initializeStream",
+      "stack_out": []
+    },
+    "493": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "494": {
+      "op": "return",
+      "stack_out": []
+    },
+    "495": {
+      "block": "main_bare_routing@14",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%49#0"
+      ],
+      "stack_out": [
+        "tmp%49#0"
+      ]
+    },
+    "497": {
+      "op": "bnz main_after_if_else@18",
+      "stack_out": []
+    },
+    "500": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%50#0"
+      ],
+      "stack_out": [
+        "tmp%50#0"
+      ]
+    },
+    "502": {
+      "op": "!",
+      "defined_out": [
+        "tmp%51#0"
+      ],
+      "stack_out": [
+        "tmp%51#0"
+      ]
+    },
+    "503": {
+      "error": "can only call when creating",
+      "op": "assert // can only call when creating",
+      "stack_out": []
+    },
+    "504": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "505": {
+      "op": "return",
+      "stack_out": []
+    },
+    "506": {
+      "subroutine": "smart_contracts/paypersec/contract.algo.ts::TapToStream.initializeStream",
+      "params": {
+        "title#0": "bytes",
+        "duration#0": "uint64",
+        "pricePerSecond#0": "uint64"
+      },
+      "block": "initializeStream",
+      "stack_in": [],
+      "op": "proto 3 0"
+    },
+    "509": {
+      "op": "bytec 6 // \"streamOwner\"",
+      "defined_out": [
+        "\"streamOwner\""
+      ],
+      "stack_out": [
+        "\"streamOwner\""
+      ]
+    },
+    "511": {
+      "op": "txn Sender",
+      "defined_out": [
+        "\"streamOwner\"",
+        "new_state_value%0#0"
+      ],
+      "stack_out": [
+        "\"streamOwner\"",
+        "new_state_value%0#0"
+      ]
+    },
+    "513": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "514": {
+      "op": "bytec 10 // \"streamTitle\"",
+      "defined_out": [
+        "\"streamTitle\""
+      ],
+      "stack_out": [
+        "\"streamTitle\""
+      ]
+    },
+    "516": {
+      "op": "frame_dig -3",
+      "defined_out": [
+        "\"streamTitle\"",
+        "title#0 (copy)"
+      ],
+      "stack_out": [
+        "\"streamTitle\"",
+        "title#0 (copy)"
+      ]
+    },
+    "518": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "519": {
+      "op": "bytec 11 // \"streamDuration\"",
+      "defined_out": [
+        "\"streamDuration\""
+      ],
+      "stack_out": [
+        "\"streamDuration\""
+      ]
+    },
+    "521": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "\"streamDuration\"",
+        "duration#0 (copy)"
+      ],
+      "stack_out": [
+        "\"streamDuration\"",
+        "duration#0 (copy)"
+      ]
+    },
+    "523": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "524": {
+      "op": "bytec_2 // \"pricePerSecond\"",
+      "defined_out": [
+        "\"pricePerSecond\""
+      ],
+      "stack_out": [
+        "\"pricePerSecond\""
+      ]
+    },
+    "525": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "\"pricePerSecond\"",
+        "pricePerSecond#0 (copy)"
+      ],
+      "stack_out": [
+        "\"pricePerSecond\"",
+        "pricePerSecond#0 (copy)"
+      ]
+    },
+    "527": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "528": {
+      "op": "bytec_1 // \"streamActive\"",
+      "defined_out": [
+        "\"streamActive\""
+      ],
+      "stack_out": [
+        "\"streamActive\""
+      ]
+    },
+    "529": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "\"streamActive\"",
+        "1"
+      ],
+      "stack_out": [
+        "\"streamActive\"",
+        "1"
+      ]
+    },
+    "530": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "531": {
+      "op": "bytec_3 // \"totalEarnings\"",
+      "defined_out": [
+        "\"totalEarnings\""
+      ],
+      "stack_out": [
+        "\"totalEarnings\""
+      ]
+    },
+    "532": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "\"totalEarnings\"",
+        "0"
+      ],
+      "stack_out": [
+        "\"totalEarnings\"",
+        "0"
+      ]
+    },
+    "533": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "534": {
+      "op": "bytec 7 // \"paymentRecipient\"",
+      "defined_out": [
+        "\"paymentRecipient\""
+      ],
+      "stack_out": [
+        "\"paymentRecipient\""
+      ]
+    },
+    "536": {
+      "op": "txn Sender",
+      "defined_out": [
+        "\"paymentRecipient\"",
+        "new_state_value%1#0"
+      ],
+      "stack_out": [
+        "\"paymentRecipient\"",
+        "new_state_value%1#0"
+      ]
+    },
+    "538": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "539": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "540": {
+      "subroutine": "smart_contracts/paypersec/contract.algo.ts::TapToStream.startStreaming",
+      "params": {
+        "payment#0": "uint64"
+      },
+      "block": "startStreaming",
+      "stack_in": [],
+      "op": "proto 1 0"
+    },
+    "543": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "544": {
+      "op": "bytec_1 // \"streamActive\"",
+      "defined_out": [
+        "\"streamActive\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"streamActive\""
+      ]
+    },
+    "545": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "546": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "547": {
+      "error": "Stream not active",
+      "op": "assert // Stream not active",
+      "stack_out": []
+    },
+    "548": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "0"
+      ]
+    },
+    "549": {
+      "op": "bytec_2 // \"pricePerSecond\"",
+      "defined_out": [
+        "\"pricePerSecond\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"pricePerSecond\""
+      ]
+    },
+    "550": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "551": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "maybe_value%1#0"
+      ]
+    },
+    "552": {
+      "op": "intc_2 // 10",
+      "defined_out": [
+        "10",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%1#0",
+        "10"
+      ]
+    },
+    "553": {
+      "op": "*",
+      "defined_out": [
+        "tenSecondCost#0"
+      ],
+      "stack_out": [
+        "tenSecondCost#0"
+      ]
+    },
+    "554": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "payment#0 (copy)",
+        "tenSecondCost#0"
+      ],
+      "stack_out": [
+        "tenSecondCost#0",
+        "payment#0 (copy)"
+      ]
+    },
+    "556": {
+      "op": "gtxns Receiver",
+      "defined_out": [
+        "tenSecondCost#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tenSecondCost#0",
+        "tmp%0#0"
+      ]
+    },
+    "558": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "tenSecondCost#0",
+        "tmp%0#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tenSecondCost#0",
+        "tmp%0#0",
+        "tmp%1#0"
+      ]
+    },
+    "560": {
+      "op": "==",
+      "defined_out": [
+        "tenSecondCost#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tenSecondCost#0",
+        "tmp%2#0"
+      ]
+    },
+    "561": {
+      "error": "Payment must be to app",
+      "op": "assert // Payment must be to app",
+      "stack_out": [
+        "tenSecondCost#0"
+      ]
+    },
+    "562": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "tenSecondCost#0",
+        "payment#0 (copy)"
+      ]
+    },
+    "564": {
+      "op": "gtxns Amount",
+      "defined_out": [
+        "tenSecondCost#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tenSecondCost#0",
+        "tmp%3#0"
+      ]
+    },
+    "566": {
+      "op": "dig 1",
+      "defined_out": [
+        "tenSecondCost#0",
+        "tenSecondCost#0 (copy)",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tenSecondCost#0",
+        "tmp%3#0",
+        "tenSecondCost#0 (copy)"
+      ]
+    },
+    "568": {
+      "op": ">=",
+      "defined_out": [
+        "tenSecondCost#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tenSecondCost#0",
+        "tmp%4#0"
+      ]
+    },
+    "569": {
+      "error": "Insufficient payment for 10-second interval",
+      "op": "assert // Insufficient payment for 10-second interval",
+      "stack_out": [
+        "tenSecondCost#0"
+      ]
+    },
+    "570": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tenSecondCost#0",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tenSecondCost#0",
+        "tmp%5#0"
+      ]
+    },
+    "572": {
+      "op": "bytec_0 // \"userHeldAmount\"",
+      "defined_out": [
+        "\"userHeldAmount\"",
+        "tenSecondCost#0",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tenSecondCost#0",
+        "tmp%5#0",
+        "\"userHeldAmount\""
+      ]
+    },
+    "573": {
+      "op": "uncover 2",
+      "stack_out": [
+        "tmp%5#0",
+        "\"userHeldAmount\"",
+        "tenSecondCost#0"
+      ]
+    },
+    "575": {
+      "op": "app_local_put",
+      "stack_out": []
+    },
+    "576": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%6#0"
+      ]
+    },
+    "578": {
+      "op": "bytec 4 // \"userWatchStartTime\"",
+      "defined_out": [
+        "\"userWatchStartTime\"",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%6#0",
+        "\"userWatchStartTime\""
+      ]
+    },
+    "580": {
+      "op": "global LatestTimestamp",
+      "defined_out": [
+        "\"userWatchStartTime\"",
+        "new_state_value%0#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tmp%6#0",
+        "\"userWatchStartTime\"",
+        "new_state_value%0#0"
+      ]
+    },
+    "582": {
+      "op": "app_local_put",
+      "stack_out": []
+    },
+    "583": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0"
+      ]
+    },
+    "585": {
+      "op": "bytec 5 // \"userLastPaymentTime\"",
+      "defined_out": [
+        "\"userLastPaymentTime\"",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0",
+        "\"userLastPaymentTime\""
+      ]
+    },
+    "587": {
+      "op": "global LatestTimestamp",
+      "defined_out": [
+        "\"userLastPaymentTime\"",
+        "new_state_value%1#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0",
+        "\"userLastPaymentTime\"",
+        "new_state_value%1#0"
+      ]
+    },
+    "589": {
+      "op": "app_local_put",
+      "stack_out": []
+    },
+    "590": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "591": {
+      "subroutine": "smart_contracts/paypersec/contract.algo.ts::TapToStream.processInterval",
+      "params": {},
+      "block": "processInterval",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "592": {
+      "op": "bytec_1 // \"streamActive\"",
+      "defined_out": [
+        "\"streamActive\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"streamActive\""
+      ]
+    },
+    "593": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "594": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "595": {
+      "error": "Stream not active",
+      "op": "assert // Stream not active",
+      "stack_out": []
+    },
+    "596": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "598": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "599": {
+      "op": "bytec_0 // \"userHeldAmount\"",
+      "defined_out": [
+        "\"userHeldAmount\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"userHeldAmount\""
+      ]
+    },
+    "600": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "heldAmount#0",
+        "maybe_exists%1#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "601": {
+      "error": "check LocalState exists",
+      "op": "assert // check LocalState exists",
+      "stack_out": [
+        "heldAmount#0"
+      ]
+    },
+    "602": {
+      "op": "txn Sender",
+      "defined_out": [
+        "heldAmount#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "tmp%1#0"
+      ]
+    },
+    "604": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "heldAmount#0",
+        "tmp%1#0",
+        "0"
+      ]
+    },
+    "605": {
+      "op": "bytec 5 // \"userLastPaymentTime\"",
+      "defined_out": [
+        "\"userLastPaymentTime\"",
+        "0",
+        "heldAmount#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "tmp%1#0",
+        "0",
+        "\"userLastPaymentTime\""
+      ]
+    },
+    "607": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "heldAmount#0",
+        "lastPaymentTime#0",
+        "maybe_exists%2#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "lastPaymentTime#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "608": {
+      "error": "check LocalState exists",
+      "op": "assert // check LocalState exists",
+      "stack_out": [
+        "heldAmount#0",
+        "lastPaymentTime#0"
+      ]
+    },
+    "609": {
+      "op": "dig 1",
+      "defined_out": [
+        "heldAmount#0",
+        "heldAmount#0 (copy)",
+        "lastPaymentTime#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "lastPaymentTime#0",
+        "heldAmount#0 (copy)"
+      ]
+    },
+    "611": {
+      "error": "No held amount to process",
+      "op": "assert // No held amount to process",
+      "stack_out": [
+        "heldAmount#0",
+        "lastPaymentTime#0"
+      ]
+    },
+    "612": {
+      "op": "global LatestTimestamp",
+      "defined_out": [
+        "heldAmount#0",
+        "lastPaymentTime#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "lastPaymentTime#0",
+        "tmp%3#0"
+      ]
+    },
+    "614": {
+      "op": "swap",
+      "stack_out": [
+        "heldAmount#0",
+        "tmp%3#0",
+        "lastPaymentTime#0"
+      ]
+    },
+    "615": {
+      "op": "intc_2 // 10",
+      "defined_out": [
+        "10",
+        "heldAmount#0",
+        "lastPaymentTime#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "tmp%3#0",
+        "lastPaymentTime#0",
+        "10"
+      ]
+    },
+    "616": {
+      "op": "+",
+      "defined_out": [
+        "heldAmount#0",
+        "tmp%3#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "tmp%3#0",
+        "tmp%4#0"
+      ]
+    },
+    "617": {
+      "op": ">=",
+      "defined_out": [
+        "heldAmount#0",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "tmp%5#0"
+      ]
+    },
+    "618": {
+      "error": "Interval not complete yet",
+      "op": "assert // Interval not complete yet",
+      "stack_out": [
+        "heldAmount#0"
+      ]
+    },
+    "619": {
+      "op": "itxn_begin"
+    },
+    "620": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "heldAmount#0",
+        "0"
+      ]
+    },
+    "621": {
+      "op": "bytec 7 // \"paymentRecipient\"",
+      "defined_out": [
+        "\"paymentRecipient\"",
+        "0",
+        "heldAmount#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "0",
+        "\"paymentRecipient\""
+      ]
+    },
+    "623": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "heldAmount#0",
+        "maybe_exists%3#0",
+        "maybe_value%3#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "maybe_value%3#0",
+        "maybe_exists%3#0"
+      ]
+    },
+    "624": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "heldAmount#0",
+        "maybe_value%3#0"
+      ]
+    },
+    "625": {
+      "op": "dig 1",
+      "stack_out": [
+        "heldAmount#0",
+        "maybe_value%3#0",
+        "heldAmount#0 (copy)"
+      ]
+    },
+    "627": {
+      "op": "itxn_field Amount",
+      "stack_out": [
+        "heldAmount#0",
+        "maybe_value%3#0"
+      ]
+    },
+    "629": {
+      "op": "itxn_field Receiver",
+      "stack_out": [
+        "heldAmount#0"
+      ]
+    },
+    "631": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "heldAmount#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "1"
+      ]
+    },
+    "632": {
+      "op": "itxn_field TypeEnum",
+      "stack_out": [
+        "heldAmount#0"
+      ]
+    },
+    "634": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "heldAmount#0",
+        "0"
+      ]
+    },
+    "635": {
+      "op": "itxn_field Fee",
+      "stack_out": [
+        "heldAmount#0"
+      ]
+    },
+    "637": {
+      "op": "itxn_submit"
+    },
+    "638": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "heldAmount#0",
+        "0"
+      ]
+    },
+    "639": {
+      "op": "bytec_3 // \"totalEarnings\"",
+      "defined_out": [
+        "\"totalEarnings\"",
+        "0",
+        "heldAmount#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "0",
+        "\"totalEarnings\""
+      ]
+    },
+    "640": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "heldAmount#0",
+        "maybe_exists%4#0",
+        "maybe_value%4#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "maybe_value%4#0",
+        "maybe_exists%4#0"
+      ]
+    },
+    "641": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "heldAmount#0",
+        "maybe_value%4#0"
+      ]
+    },
+    "642": {
+      "op": "dig 1",
+      "stack_out": [
+        "heldAmount#0",
+        "maybe_value%4#0",
+        "heldAmount#0 (copy)"
+      ]
+    },
+    "644": {
+      "op": "+",
+      "defined_out": [
+        "heldAmount#0",
+        "new_state_value%0#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "new_state_value%0#0"
+      ]
+    },
+    "645": {
+      "op": "bytec_3 // \"totalEarnings\"",
+      "stack_out": [
+        "heldAmount#0",
+        "new_state_value%0#0",
+        "\"totalEarnings\""
+      ]
+    },
+    "646": {
+      "op": "swap",
+      "stack_out": [
+        "heldAmount#0",
+        "\"totalEarnings\"",
+        "new_state_value%0#0"
+      ]
+    },
+    "647": {
+      "op": "app_global_put",
+      "stack_out": [
+        "heldAmount#0"
+      ]
+    },
+    "648": {
+      "op": "txn Sender",
+      "defined_out": [
+        "heldAmount#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "tmp%6#0"
+      ]
+    },
+    "650": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "heldAmount#0",
+        "tmp%6#0",
+        "0"
+      ]
+    },
+    "651": {
+      "op": "bytec 8 // \"userTotalPaid\"",
+      "defined_out": [
+        "\"userTotalPaid\"",
+        "0",
+        "heldAmount#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "tmp%6#0",
+        "0",
+        "\"userTotalPaid\""
+      ]
+    },
+    "653": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "heldAmount#0",
+        "maybe_exists%5#0",
+        "maybe_value%5#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "maybe_value%5#0",
+        "maybe_exists%5#0"
+      ]
+    },
+    "654": {
+      "error": "check LocalState exists",
+      "op": "assert // check LocalState exists",
+      "stack_out": [
+        "heldAmount#0",
+        "maybe_value%5#0"
+      ]
+    },
+    "655": {
+      "op": "txn Sender",
+      "defined_out": [
+        "heldAmount#0",
+        "maybe_value%5#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "maybe_value%5#0",
+        "tmp%7#0"
+      ]
+    },
+    "657": {
+      "op": "swap",
+      "stack_out": [
+        "heldAmount#0",
+        "tmp%7#0",
+        "maybe_value%5#0"
+      ]
+    },
+    "658": {
+      "op": "uncover 2",
+      "stack_out": [
+        "tmp%7#0",
+        "maybe_value%5#0",
+        "heldAmount#0"
+      ]
+    },
+    "660": {
+      "op": "+",
+      "defined_out": [
+        "new_state_value%1#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tmp%7#0",
+        "new_state_value%1#0"
+      ]
+    },
+    "661": {
+      "op": "bytec 8 // \"userTotalPaid\""
+    },
+    "663": {
+      "op": "swap",
+      "stack_out": [
+        "tmp%7#0",
+        "\"userTotalPaid\"",
+        "new_state_value%1#0"
+      ]
+    },
+    "664": {
+      "op": "app_local_put",
+      "stack_out": []
+    },
+    "665": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0"
+      ]
+    },
+    "667": {
+      "op": "bytec 5 // \"userLastPaymentTime\"",
+      "stack_out": [
+        "tmp%8#0",
+        "\"userLastPaymentTime\""
+      ]
+    },
+    "669": {
+      "op": "global LatestTimestamp",
+      "defined_out": [
+        "\"userLastPaymentTime\"",
+        "new_state_value%2#0",
+        "tmp%8#0"
+      ],
+      "stack_out": [
+        "tmp%8#0",
+        "\"userLastPaymentTime\"",
+        "new_state_value%2#0"
+      ]
+    },
+    "671": {
+      "op": "app_local_put",
+      "stack_out": []
+    },
+    "672": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%9#0"
+      ],
+      "stack_out": [
+        "tmp%9#0"
+      ]
+    },
+    "674": {
+      "op": "bytec_0 // \"userHeldAmount\"",
+      "stack_out": [
+        "tmp%9#0",
+        "\"userHeldAmount\""
+      ]
+    },
+    "675": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "tmp%9#0",
+        "\"userHeldAmount\"",
+        "0"
+      ]
+    },
+    "676": {
+      "op": "app_local_put",
+      "stack_out": []
+    },
+    "677": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "678": {
+      "subroutine": "smart_contracts/paypersec/contract.algo.ts::TapToStream.continueStreaming",
+      "params": {
+        "payment#0": "uint64"
+      },
+      "block": "continueStreaming",
+      "stack_in": [],
+      "op": "proto 1 0"
+    },
+    "681": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "682": {
+      "op": "bytec_1 // \"streamActive\"",
+      "defined_out": [
+        "\"streamActive\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"streamActive\""
+      ]
+    },
+    "683": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "684": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "685": {
+      "error": "Stream not active",
+      "op": "assert // Stream not active",
+      "stack_out": []
+    },
+    "686": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "688": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "689": {
+      "op": "bytec 4 // \"userWatchStartTime\"",
+      "defined_out": [
+        "\"userWatchStartTime\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"userWatchStartTime\""
+      ]
+    },
+    "691": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "692": {
+      "error": "check LocalState exists",
+      "op": "assert // check LocalState exists",
+      "stack_out": [
+        "maybe_value%1#0"
+      ]
+    },
+    "693": {
+      "error": "Must start streaming first",
+      "op": "assert // Must start streaming first",
+      "stack_out": []
+    },
+    "694": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "0"
+      ]
+    },
+    "695": {
+      "op": "bytec_2 // \"pricePerSecond\"",
+      "defined_out": [
+        "\"pricePerSecond\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"pricePerSecond\""
+      ]
+    },
+    "696": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%2#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "697": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "maybe_value%2#0"
+      ]
+    },
+    "698": {
+      "op": "intc_2 // 10",
+      "defined_out": [
+        "10",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "maybe_value%2#0",
+        "10"
+      ]
+    },
+    "699": {
+      "op": "*",
+      "defined_out": [
+        "tenSecondCost#0"
+      ],
+      "stack_out": [
+        "tenSecondCost#0"
+      ]
+    },
+    "700": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "payment#0 (copy)",
+        "tenSecondCost#0"
+      ],
+      "stack_out": [
+        "tenSecondCost#0",
+        "payment#0 (copy)"
+      ]
+    },
+    "702": {
+      "op": "gtxns Receiver",
+      "defined_out": [
+        "tenSecondCost#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "tenSecondCost#0",
+        "tmp%2#0"
+      ]
+    },
+    "704": {
+      "op": "global CurrentApplicationAddress",
+      "defined_out": [
+        "tenSecondCost#0",
+        "tmp%2#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "tenSecondCost#0",
+        "tmp%2#0",
+        "tmp%3#0"
+      ]
+    },
+    "706": {
+      "op": "==",
+      "defined_out": [
+        "tenSecondCost#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "tenSecondCost#0",
+        "tmp%4#0"
+      ]
+    },
+    "707": {
+      "error": "Payment must be to app",
+      "op": "assert // Payment must be to app",
+      "stack_out": [
+        "tenSecondCost#0"
+      ]
+    },
+    "708": {
+      "op": "frame_dig -1",
+      "stack_out": [
+        "tenSecondCost#0",
+        "payment#0 (copy)"
+      ]
+    },
+    "710": {
+      "op": "gtxns Amount",
+      "defined_out": [
+        "tenSecondCost#0",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tenSecondCost#0",
+        "tmp%5#0"
+      ]
+    },
+    "712": {
+      "op": "dig 1",
+      "defined_out": [
+        "tenSecondCost#0",
+        "tenSecondCost#0 (copy)",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "tenSecondCost#0",
+        "tmp%5#0",
+        "tenSecondCost#0 (copy)"
+      ]
+    },
+    "714": {
+      "op": ">=",
+      "defined_out": [
+        "tenSecondCost#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "tenSecondCost#0",
+        "tmp%6#0"
+      ]
+    },
+    "715": {
+      "error": "Insufficient payment for 10-second interval",
+      "op": "assert // Insufficient payment for 10-second interval",
+      "stack_out": [
+        "tenSecondCost#0"
+      ]
+    },
+    "716": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tenSecondCost#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tenSecondCost#0",
+        "tmp%7#0"
+      ]
+    },
+    "718": {
+      "op": "bytec_0 // \"userHeldAmount\"",
+      "defined_out": [
+        "\"userHeldAmount\"",
+        "tenSecondCost#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "tenSecondCost#0",
+        "tmp%7#0",
+        "\"userHeldAmount\""
+      ]
+    },
+    "719": {
+      "op": "uncover 2",
+      "stack_out": [
+        "tmp%7#0",
+        "\"userHeldAmount\"",
+        "tenSecondCost#0"
+      ]
+    },
+    "721": {
+      "op": "app_local_put",
+      "stack_out": []
+    },
+    "722": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "723": {
+      "subroutine": "smart_contracts/paypersec/contract.algo.ts::TapToStream.stopStreaming",
+      "params": {},
+      "block": "stopStreaming",
+      "stack_in": [],
+      "op": "proto 0 0"
+    },
+    "726": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "728": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "729": {
+      "op": "bytec_0 // \"userHeldAmount\"",
+      "defined_out": [
+        "\"userHeldAmount\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"userHeldAmount\""
+      ]
+    },
+    "730": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "heldAmount#0",
+        "maybe_exists%0#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "731": {
+      "op": "swap",
+      "stack_out": [
+        "maybe_exists%0#0",
+        "heldAmount#0"
+      ]
+    },
+    "732": {
+      "op": "dup",
+      "stack_out": [
+        "maybe_exists%0#0",
+        "heldAmount#0",
+        "heldAmount#0 (copy)"
+      ]
+    },
+    "733": {
+      "op": "uncover 2",
+      "defined_out": [
+        "heldAmount#0",
+        "maybe_exists%0#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "heldAmount#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "735": {
+      "error": "check LocalState exists",
+      "op": "assert // check LocalState exists",
+      "stack_out": [
+        "heldAmount#0",
+        "heldAmount#0"
+      ]
+    },
+    "736": {
+      "op": "bz stopStreaming_after_if_else@3",
+      "stack_out": [
+        "heldAmount#0"
+      ]
+    },
+    "739": {
+      "op": "itxn_begin"
+    },
+    "740": {
+      "op": "txn Sender",
+      "defined_out": [
+        "heldAmount#0",
+        "inner_txn_params%0%%param_Receiver_idx_0#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "inner_txn_params%0%%param_Receiver_idx_0#0"
+      ]
+    },
+    "742": {
+      "op": "frame_dig 0",
+      "stack_out": [
+        "heldAmount#0",
+        "inner_txn_params%0%%param_Receiver_idx_0#0",
+        "heldAmount#0"
+      ]
+    },
+    "744": {
+      "op": "itxn_field Amount",
+      "stack_out": [
+        "heldAmount#0",
+        "inner_txn_params%0%%param_Receiver_idx_0#0"
+      ]
+    },
+    "746": {
+      "op": "itxn_field Receiver",
+      "stack_out": [
+        "heldAmount#0"
+      ]
+    },
+    "748": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "1",
+        "heldAmount#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "1"
+      ]
+    },
+    "749": {
+      "op": "itxn_field TypeEnum",
+      "stack_out": [
+        "heldAmount#0"
+      ]
+    },
+    "751": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "heldAmount#0",
+        "0"
+      ]
+    },
+    "752": {
+      "op": "itxn_field Fee",
+      "stack_out": [
+        "heldAmount#0"
+      ]
+    },
+    "754": {
+      "op": "itxn_submit"
+    },
+    "755": {
+      "block": "stopStreaming_after_if_else@3",
+      "stack_in": [
+        "heldAmount#0"
+      ],
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "tmp%2#0"
+      ]
+    },
+    "757": {
+      "op": "bytec_0 // \"userHeldAmount\"",
+      "defined_out": [
+        "\"userHeldAmount\"",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "tmp%2#0",
+        "\"userHeldAmount\""
+      ]
+    },
+    "758": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "\"userHeldAmount\"",
+        "0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "tmp%2#0",
+        "\"userHeldAmount\"",
+        "0"
+      ]
+    },
+    "759": {
+      "op": "app_local_put",
+      "stack_out": [
+        "heldAmount#0"
+      ]
+    },
+    "760": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "tmp%3#0"
+      ]
+    },
+    "762": {
+      "op": "bytec 4 // \"userWatchStartTime\"",
+      "defined_out": [
+        "\"userWatchStartTime\"",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "heldAmount#0",
+        "tmp%3#0",
+        "\"userWatchStartTime\""
+      ]
+    },
+    "764": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "heldAmount#0",
+        "tmp%3#0",
+        "\"userWatchStartTime\"",
+        "0"
+      ]
+    },
+    "765": {
+      "op": "app_local_put",
+      "stack_out": [
+        "heldAmount#0"
+      ]
+    },
+    "766": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "767": {
+      "subroutine": "smart_contracts/paypersec/contract.algo.ts::TapToStream.updatePaymentRecipient",
+      "params": {
+        "newRecipient#0": "bytes"
+      },
+      "block": "updatePaymentRecipient",
+      "stack_in": [],
+      "op": "proto 1 0"
+    },
+    "770": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "772": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "773": {
+      "op": "bytec 6 // \"streamOwner\"",
+      "defined_out": [
+        "\"streamOwner\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"streamOwner\""
+      ]
+    },
+    "775": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "776": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "777": {
+      "op": "==",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "778": {
+      "error": "Only owner can update recipient",
+      "op": "assert // Only owner can update recipient",
+      "stack_out": []
+    },
+    "779": {
+      "op": "bytec 7 // \"paymentRecipient\"",
+      "defined_out": [
+        "\"paymentRecipient\""
+      ],
+      "stack_out": [
+        "\"paymentRecipient\""
+      ]
+    },
+    "781": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "\"paymentRecipient\"",
+        "newRecipient#0 (copy)"
+      ],
+      "stack_out": [
+        "\"paymentRecipient\"",
+        "newRecipient#0 (copy)"
+      ]
+    },
+    "783": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "784": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "785": {
+      "subroutine": "smart_contracts/paypersec/contract.algo.ts::TapToStream.emergencyStop",
+      "params": {},
+      "block": "emergencyStop",
+      "stack_in": [],
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "787": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "788": {
+      "op": "bytec 6 // \"streamOwner\"",
+      "defined_out": [
+        "\"streamOwner\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"streamOwner\""
+      ]
+    },
+    "790": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "791": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "tmp%0#0",
+        "maybe_value%0#0"
+      ]
+    },
+    "792": {
+      "op": "==",
+      "defined_out": [
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "tmp%1#0"
+      ]
+    },
+    "793": {
+      "error": "Only owner can emergency stop",
+      "op": "assert // Only owner can emergency stop",
+      "stack_out": []
+    },
+    "794": {
+      "op": "bytec_1 // \"streamActive\"",
+      "defined_out": [
+        "\"streamActive\""
+      ],
+      "stack_out": [
+        "\"streamActive\""
+      ]
+    },
+    "795": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "\"streamActive\"",
+        "0"
+      ]
+    },
+    "796": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "797": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "798": {
+      "subroutine": "smart_contracts/paypersec/contract.algo.ts::TapToStream.getStreamInfo",
+      "params": {},
+      "block": "getStreamInfo",
+      "stack_in": [],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0"
+      ],
+      "stack_out": [
+        "0"
+      ]
+    },
+    "799": {
+      "op": "bytec 10 // \"streamTitle\"",
+      "defined_out": [
+        "\"streamTitle\"",
+        "0"
+      ],
+      "stack_out": [
+        "0",
+        "\"streamTitle\""
+      ]
+    },
+    "801": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%0#0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "802": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "maybe_value%0#0"
+      ]
+    },
+    "803": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_value%0#0",
+        "0"
+      ]
+    },
+    "804": {
+      "op": "bytec 11 // \"streamDuration\"",
+      "defined_out": [
+        "\"streamDuration\"",
+        "0",
+        "maybe_value%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "0",
+        "\"streamDuration\""
+      ]
+    },
+    "806": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "807": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "808": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "0"
+      ]
+    },
+    "809": {
+      "op": "bytec_2 // \"pricePerSecond\"",
+      "defined_out": [
+        "\"pricePerSecond\"",
+        "0",
+        "maybe_value%0#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "0",
+        "\"pricePerSecond\""
+      ]
+    },
+    "810": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%2#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "811": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "812": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "0"
+      ]
+    },
+    "813": {
+      "op": "bytec_2 // \"pricePerSecond\"",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "0",
+        "\"pricePerSecond\""
+      ]
+    },
+    "814": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%3#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "maybe_exists%3#0"
+      ]
+    },
+    "815": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0"
+      ]
+    },
+    "816": {
+      "op": "intc_2 // 10",
+      "defined_out": [
+        "10",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "10"
+      ]
+    },
+    "817": {
+      "op": "*",
+      "defined_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "tmp%0#0"
+      ]
+    },
+    "818": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "819": {
+      "op": "bytec_3 // \"totalEarnings\"",
+      "defined_out": [
+        "\"totalEarnings\"",
+        "0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "tmp%0#0",
+        "0",
+        "\"totalEarnings\""
+      ]
+    },
+    "820": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%4#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%4#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "tmp%0#0",
+        "maybe_value%4#0",
+        "maybe_exists%4#0"
+      ]
+    },
+    "821": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "tmp%0#0",
+        "maybe_value%4#0"
+      ]
+    },
+    "822": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "tmp%0#0",
+        "maybe_value%4#0",
+        "0"
+      ]
+    },
+    "823": {
+      "op": "bytec_1 // \"streamActive\"",
+      "defined_out": [
+        "\"streamActive\"",
+        "0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%4#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "tmp%0#0",
+        "maybe_value%4#0",
+        "0",
+        "\"streamActive\""
+      ]
+    },
+    "824": {
+      "op": "app_global_get_ex",
+      "defined_out": [
+        "maybe_exists%5#0",
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%4#0",
+        "maybe_value%5#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "tmp%0#0",
+        "maybe_value%4#0",
+        "maybe_value%5#0",
+        "maybe_exists%5#0"
+      ]
+    },
+    "825": {
+      "error": "check GlobalState exists",
+      "op": "assert // check GlobalState exists",
+      "stack_out": [
+        "maybe_value%0#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "tmp%0#0",
+        "maybe_value%4#0",
+        "maybe_value%5#0"
+      ]
+    },
+    "826": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "827": {
+      "subroutine": "smart_contracts/paypersec/contract.algo.ts::TapToStream.getUserStreamingInfo",
+      "params": {},
+      "block": "getUserStreamingInfo",
+      "stack_in": [],
+      "op": "proto 0 5"
+    },
+    "830": {
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "832": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0"
+      ]
+    },
+    "833": {
+      "op": "bytec 5 // \"userLastPaymentTime\"",
+      "defined_out": [
+        "\"userLastPaymentTime\"",
+        "0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0",
+        "0",
+        "\"userLastPaymentTime\""
+      ]
+    },
+    "835": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "lastPaymentTime#0",
+        "maybe_exists%0#0"
+      ],
+      "stack_out": [
+        "lastPaymentTime#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "836": {
+      "op": "swap",
+      "stack_out": [
+        "maybe_exists%0#0",
+        "lastPaymentTime#0"
+      ]
+    },
+    "837": {
+      "op": "dup",
+      "stack_out": [
+        "maybe_exists%0#0",
+        "lastPaymentTime#0",
+        "lastPaymentTime#0 (copy)"
+      ]
+    },
+    "838": {
+      "op": "uncover 2",
+      "defined_out": [
+        "lastPaymentTime#0",
+        "maybe_exists%0#0"
+      ],
+      "stack_out": [
+        "lastPaymentTime#0",
+        "lastPaymentTime#0",
+        "maybe_exists%0#0"
+      ]
+    },
+    "840": {
+      "error": "check LocalState exists",
+      "op": "assert // check LocalState exists",
+      "stack_out": [
+        "lastPaymentTime#0",
+        "lastPaymentTime#0"
+      ]
+    },
+    "841": {
+      "op": "bz getUserStreamingInfo_bool_false@3",
+      "stack_out": [
+        "lastPaymentTime#0"
+      ]
+    },
+    "844": {
+      "op": "global LatestTimestamp",
+      "defined_out": [
+        "lastPaymentTime#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "lastPaymentTime#0",
+        "tmp%2#0"
+      ]
+    },
+    "846": {
+      "op": "frame_dig 0",
+      "stack_out": [
+        "lastPaymentTime#0",
+        "tmp%2#0",
+        "lastPaymentTime#0"
+      ]
+    },
+    "848": {
+      "op": "intc_2 // 10",
+      "defined_out": [
+        "10",
+        "lastPaymentTime#0",
+        "tmp%2#0"
+      ],
+      "stack_out": [
+        "lastPaymentTime#0",
+        "tmp%2#0",
+        "lastPaymentTime#0",
+        "10"
+      ]
+    },
+    "849": {
+      "op": "+",
+      "defined_out": [
+        "lastPaymentTime#0",
+        "tmp%2#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "lastPaymentTime#0",
+        "tmp%2#0",
+        "tmp%3#0"
+      ]
+    },
+    "850": {
+      "op": ">=",
+      "defined_out": [
+        "lastPaymentTime#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "lastPaymentTime#0",
+        "tmp%4#0"
+      ]
+    },
+    "851": {
+      "op": "bz getUserStreamingInfo_bool_false@3",
+      "stack_out": [
+        "lastPaymentTime#0"
+      ]
+    },
+    "854": {
+      "op": "intc_1 // 1",
+      "defined_out": [
+        "canProcess#0",
+        "lastPaymentTime#0"
+      ],
+      "stack_out": [
+        "lastPaymentTime#0",
+        "canProcess#0"
+      ]
+    },
+    "855": {
+      "block": "getUserStreamingInfo_bool_merge@4",
+      "stack_in": [
+        "lastPaymentTime#0",
+        "canProcess#0"
+      ],
+      "op": "txn Sender",
+      "defined_out": [
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "lastPaymentTime#0",
+        "canProcess#0",
+        "tmp%5#0"
+      ]
+    },
+    "857": {
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "0",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "lastPaymentTime#0",
+        "canProcess#0",
+        "tmp%5#0",
+        "0"
+      ]
+    },
+    "858": {
+      "op": "bytec_0 // \"userHeldAmount\"",
+      "defined_out": [
+        "\"userHeldAmount\"",
+        "0",
+        "tmp%5#0"
+      ],
+      "stack_out": [
+        "lastPaymentTime#0",
+        "canProcess#0",
+        "tmp%5#0",
+        "0",
+        "\"userHeldAmount\""
+      ]
+    },
+    "859": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "maybe_exists%1#0",
+        "maybe_value%1#0"
+      ],
+      "stack_out": [
+        "lastPaymentTime#0",
+        "canProcess#0",
+        "maybe_value%1#0",
+        "maybe_exists%1#0"
+      ]
+    },
+    "860": {
+      "error": "check LocalState exists",
+      "op": "assert // check LocalState exists",
+      "stack_out": [
+        "lastPaymentTime#0",
+        "canProcess#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "861": {
+      "op": "txn Sender",
+      "defined_out": [
+        "maybe_value%1#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "lastPaymentTime#0",
+        "canProcess#0",
+        "maybe_value%1#0",
+        "tmp%6#0"
+      ]
+    },
+    "863": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "lastPaymentTime#0",
+        "canProcess#0",
+        "maybe_value%1#0",
+        "tmp%6#0",
+        "0"
+      ]
+    },
+    "864": {
+      "op": "bytec 8 // \"userTotalPaid\"",
+      "defined_out": [
+        "\"userTotalPaid\"",
+        "0",
+        "maybe_value%1#0",
+        "tmp%6#0"
+      ],
+      "stack_out": [
+        "lastPaymentTime#0",
+        "canProcess#0",
+        "maybe_value%1#0",
+        "tmp%6#0",
+        "0",
+        "\"userTotalPaid\""
+      ]
+    },
+    "866": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "maybe_exists%2#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0"
+      ],
+      "stack_out": [
+        "lastPaymentTime#0",
+        "canProcess#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_exists%2#0"
+      ]
+    },
+    "867": {
+      "error": "check LocalState exists",
+      "op": "assert // check LocalState exists",
+      "stack_out": [
+        "lastPaymentTime#0",
+        "canProcess#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "868": {
+      "op": "txn Sender",
+      "defined_out": [
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "lastPaymentTime#0",
+        "canProcess#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "tmp%7#0"
+      ]
+    },
+    "870": {
+      "op": "intc_0 // 0",
+      "stack_out": [
+        "lastPaymentTime#0",
+        "canProcess#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "tmp%7#0",
+        "0"
+      ]
+    },
+    "871": {
+      "op": "bytec 4 // \"userWatchStartTime\"",
+      "defined_out": [
+        "\"userWatchStartTime\"",
+        "0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "tmp%7#0"
+      ],
+      "stack_out": [
+        "lastPaymentTime#0",
+        "canProcess#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "tmp%7#0",
+        "0",
+        "\"userWatchStartTime\""
+      ]
+    },
+    "873": {
+      "op": "app_local_get_ex",
+      "defined_out": [
+        "maybe_exists%3#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0"
+      ],
+      "stack_out": [
+        "lastPaymentTime#0",
+        "canProcess#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "maybe_exists%3#0"
+      ]
+    },
+    "874": {
+      "error": "check LocalState exists",
+      "op": "assert // check LocalState exists",
+      "stack_out": [
+        "lastPaymentTime#0",
+        "canProcess#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0"
+      ]
+    },
+    "875": {
+      "op": "uncover 2",
+      "stack_out": [
+        "lastPaymentTime#0",
+        "canProcess#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "maybe_value%1#0"
+      ]
+    },
+    "877": {
+      "op": "frame_dig 0",
+      "defined_out": [
+        "lastPaymentTime#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0"
+      ],
+      "stack_out": [
+        "lastPaymentTime#0",
+        "canProcess#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "maybe_value%1#0",
+        "lastPaymentTime#0"
+      ]
+    },
+    "879": {
+      "op": "uncover 3",
+      "stack_out": [
+        "lastPaymentTime#0",
+        "canProcess#0",
+        "maybe_value%3#0",
+        "maybe_value%1#0",
+        "lastPaymentTime#0",
+        "maybe_value%2#0"
+      ]
+    },
+    "881": {
+      "op": "uncover 3",
+      "stack_out": [
+        "lastPaymentTime#0",
+        "canProcess#0",
+        "maybe_value%1#0",
+        "lastPaymentTime#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0"
+      ]
+    },
+    "883": {
+      "op": "uncover 4",
+      "defined_out": [
+        "canProcess#0",
+        "lastPaymentTime#0",
+        "maybe_value%1#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0"
+      ],
+      "stack_out": [
+        "lastPaymentTime#0",
+        "maybe_value%1#0",
+        "lastPaymentTime#0",
+        "maybe_value%2#0",
+        "maybe_value%3#0",
+        "canProcess#0"
+      ]
+    },
+    "885": {
+      "op": "uncover 5"
+    },
+    "887": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "888": {
+      "block": "getUserStreamingInfo_bool_false@3",
+      "stack_in": [
+        "lastPaymentTime#0"
+      ],
+      "op": "intc_0 // 0",
+      "defined_out": [
+        "canProcess#0"
+      ],
+      "stack_out": [
+        "lastPaymentTime#0",
+        "canProcess#0"
+      ]
+    },
+    "889": {
+      "op": "b getUserStreamingInfo_bool_merge@4"
+    }
+  }
+}
