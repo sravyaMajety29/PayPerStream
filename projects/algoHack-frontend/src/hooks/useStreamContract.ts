@@ -1,10 +1,11 @@
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { useWallet } from "../context/WalletContext";
-import { TapToStreamClient, TapToStreamFactory, GetStreamInfoResult } from "../contracts/TapToStream";
+import { tapToStreamClient, tapToStreamFactory, GetStreamInfoResult } from "../contracts/tapToStreamClient";
 import { AlgorandClient, microAlgo } from "@algorandfoundation/algokit-utils";
 import algosdk from "algosdk";
 import { toast } from "sonner";
 import { getAlgodConfigFromViteEnvironment } from "../utils/getAlgorandConfigs";
+import { AlgoAmount } from "@algorandfoundation/algokit-utils/types/amount";
 
 // Use the deployed App ID from environment or fallback to deployed ID
 const DEMO_APP_ID = parseInt(import.meta.env.VITE_APP_ID || import.meta.env.VITE_STREAM_APP_ID || "1015");
@@ -13,7 +14,7 @@ export function useStreamContract() {
   const { transactionSigner, activeAddress } = useWallet();
   const stableSigner = useMemo(() => transactionSigner, [activeAddress]);
 
-  const [streamClient, setStreamClient] = useState<TapToStreamClient | null>(null);
+  const [streamClient, setStreamClient] = useState<tapToStreamClient | null>(null);
   const [streamInfo, setStreamInfo] = useState<GetStreamInfoResult | null>(null);
   const [isStreaming, setIsStreaming] = useState(false);
   const [intervalId, setIntervalId] = useState<NodeJS.Timeout | null>(null);
@@ -33,8 +34,8 @@ export function useStreamContract() {
       const algodConfig = getAlgodConfigFromViteEnvironment();
       const algorand = AlgorandClient.fromConfig({ algodConfig });
 
-      // Create the TapToStream client using factory pattern
-      const factory = new TapToStreamFactory({
+      // Create the tapToStream client using factory pattern
+      const factory = new tapToStreamFactory({
         defaultSender: activeAddress,
         algorand,
       });
@@ -168,7 +169,7 @@ export function useStreamContract() {
         sender: activeAddress,
         receiver: streamClient.appClient.appAddress,
         amount: microAlgo(tenSecondCost),
-        note: new TextEncoder().encode("TapToStream payment"),
+        note: new TextEncoder().encode("tapToStream payment"),
       });
 
       console.log("💳 Payment transaction created successfully");
@@ -178,12 +179,20 @@ export function useStreamContract() {
         console.log("🎬 Starting streaming (will handle opt-in if needed)...");
 
         // Now call startStreaming - it should handle opt-in automatically if needed
-        const result = await streamClient.send.startStreaming({
+        const compose = streamClient.newGroup();
+        if (!userOptedIn) {
+          compose.optIn.optIn({
+            sender: activeAddress,
+            args: [],
+          });
+        }
+        compose.startStreaming({
           args: {
             payment: paymentTxn,
           },
           sender: activeAddress,
         });
+        const result = await compose.send();
         console.log("✅ Start streaming result:", result);
 
         setIsStreaming(true);
@@ -215,7 +224,11 @@ export function useStreamContract() {
           console.log("⏰ Processing 10-second interval...");
 
           // First process the previous interval
-          await streamClient.send.processInterval();
+          await streamClient.send.processInterval({
+            args: [],
+            sender: activeAddress,
+            extraFee: AlgoAmount.MicroAlgos(1000),
+          });
           console.log("✅ Previous interval processed");
 
           // Create payment transaction for next interval
@@ -269,7 +282,11 @@ export function useStreamContract() {
       }
 
       // Stop streaming contract and get refund for unused time
-      await streamClient.send.stopStreaming();
+      await streamClient.send.stopStreaming({
+        args: [],
+        sender: activeAddress,
+        extraFee: AlgoAmount.MicroAlgos(1000),
+      });
 
       setIsStreaming(false);
 

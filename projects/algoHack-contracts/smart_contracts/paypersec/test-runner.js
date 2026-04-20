@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Simple test runner for TapToStream smart contract
+ * Simple test runner for tapToStream smart contract
  *
  * Prerequisites:
  * 1. Make sure you have AlgoKit LocalNet running: `algokit localnet start`
@@ -16,7 +16,7 @@
 const { execSync } = require("child_process");
 const path = require("path");
 
-console.log("🚀 Starting TapToStream Contract Tests...\n");
+console.log("🚀 Starting tapToStream Contract Tests...\n");
 
 try {
   // Check if LocalNet is running

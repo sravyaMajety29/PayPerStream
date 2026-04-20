@@ -1,4 +1,4 @@
-# TapToStream Smart Contract Testing
+# tapToStream Smart Contract Testing
 
 ## Prerequisites
 
@@ -107,7 +107,7 @@ The tests will show:
 
 ## Understanding the Smart Contract
 
-The TapToStream contract implements:
+The tapToStream contract implements:
 
 - **10-second interval payments** for streaming content
 - **Pay-per-second pricing** with prepaid intervals

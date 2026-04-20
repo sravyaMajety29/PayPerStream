@@ -317,7 +317,7 @@ export function VideoPlayer({ video, onBack, isWalletConnected, algoBalance }: V
                           <strong>Smart Contract Rate:</strong> {costPer10Seconds.toFixed(3)} ALGO per 10 seconds
                         </p>
                         <p className="text-yellow-200 text-xs mt-1">
-                          <strong>Stream Title:</strong> {streamContract.streamInfo?.title || "TapToStream"}
+                          <strong>Stream Title:</strong> {streamContract.streamInfo?.title || "payStream"}
                         </p>
                       </div>
                     </div>

@@ -13,7 +13,7 @@ import {
 } from "@algorandfoundation/algorand-typescript";
 
 // Tap-to-Stream: Pay-per-second streaming platform with 10-second intervals
-export class TapToStream extends Contract {
+export class tapToStream extends Contract {
   // Hardcoded payment recipient address stored in global state
   public paymentRecipient = GlobalState<Account>();
 
@@ -32,6 +32,15 @@ export class TapToStream extends Contract {
   public userLastPaymentTime = LocalState<uint64>(); // Last payment timestamp
   public userTotalPaid = LocalState<uint64>(); // Total amount paid by user
   public userWatchStartTime = LocalState<uint64>(); // When user started watching
+
+
+  @abimethod({allowActions:["OptIn"]})
+  public optIn(): void {
+    this.userHeldAmount(Txn.sender).value = 0;
+    this.userLastPaymentTime(Txn.sender).value = 0;
+    this.userTotalPaid(Txn.sender).value = 0;
+    this.userWatchStartTime(Txn.sender).value = 0;
+  }
 
   /**
    * Initialize a new stream with hardcoded payment recipient

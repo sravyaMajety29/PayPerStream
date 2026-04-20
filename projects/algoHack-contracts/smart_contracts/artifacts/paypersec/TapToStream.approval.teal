@@ -4,23 +4,23 @@
 // @algorandfoundation/algorand-typescript/arc4/index.d.ts::Contract.approvalProgram() -> uint64:
 main:
     intcblock 0 1 10
-    bytecblock "userHeldAmount" "streamActive" "pricePerSecond" "totalEarnings" "userWatchStartTime" "userLastPaymentTime" "streamOwner" "paymentRecipient" "userTotalPaid" 0x151f7c75 "streamTitle" "streamDuration"
+    bytecblock "userHeldAmount" "streamActive" "userLastPaymentTime" "userWatchStartTime" "pricePerSecond" "userTotalPaid" "totalEarnings" "streamOwner" "paymentRecipient" 0x151f7c75 "streamTitle" "streamDuration"
     // smart_contracts/paypersec/contract.algo.ts:16
-    // export class TapToStream extends Contract {
+    // export class tapToStream extends Contract {
     txn NumAppArgs
-    bz main_bare_routing@14
-    pushbytess 0x731bf01a 0x64c979a5 0x1af661a1 0x812388d5 0x2862491e 0xebdaf4b5 0xb8661a82 0x10572b8a 0x00b9794b // method "initializeStream(string,uint64,uint64)void", method "startStreaming(pay)void", method "processInterval()void", method "continueStreaming(pay)void", method "stopStreaming()void", method "updatePaymentRecipient(account)void", method "emergencyStop()void", method "getStreamInfo()(string,uint64,uint64,uint64,uint64,bool)", method "getUserStreamingInfo()(uint64,uint64,uint64,uint64,bool)"
+    bz main_bare_routing@15
+    pushbytess 0x29314d95 0x731bf01a 0x64c979a5 0x1af661a1 0x812388d5 0x2862491e 0xebdaf4b5 0xb8661a82 0x10572b8a 0x00b9794b // method "optIn()void", method "initializeStream(string,uint64,uint64)void", method "startStreaming(pay)void", method "processInterval()void", method "continueStreaming(pay)void", method "stopStreaming()void", method "updatePaymentRecipient(account)void", method "emergencyStop()void", method "getStreamInfo()(string,uint64,uint64,uint64,uint64,bool)", method "getUserStreamingInfo()(uint64,uint64,uint64,uint64,bool)"
     txna ApplicationArgs 0
-    match main_initializeStream_route@3 main_startStreaming_route@4 main_processInterval_route@5 main_continueStreaming_route@6 main_stopStreaming_route@7 main_updatePaymentRecipient_route@8 main_emergencyStop_route@9 main_getStreamInfo_route@10 main_getUserStreamingInfo_route@11
+    match main_optIn_route@3 main_initializeStream_route@4 main_startStreaming_route@5 main_processInterval_route@6 main_continueStreaming_route@7 main_stopStreaming_route@8 main_updatePaymentRecipient_route@9 main_emergencyStop_route@10 main_getStreamInfo_route@11 main_getUserStreamingInfo_route@12
 
-main_after_if_else@18:
+main_after_if_else@19:
     // smart_contracts/paypersec/contract.algo.ts:16
-    // export class TapToStream extends Contract {
+    // export class tapToStream extends Contract {
     intc_0 // 0
     return
 
-main_getUserStreamingInfo_route@11:
-    // smart_contracts/paypersec/contract.algo.ts:190
+main_getUserStreamingInfo_route@12:
+    // smart_contracts/paypersec/contract.algo.ts:199
     // @abimethod({ readonly: true })
     txn OnCompletion
     !
@@ -56,8 +56,8 @@ main_getUserStreamingInfo_route@11:
     intc_1 // 1
     return
 
-main_getStreamInfo_route@10:
-    // smart_contracts/paypersec/contract.algo.ts:168
+main_getStreamInfo_route@11:
+    // smart_contracts/paypersec/contract.algo.ts:177
     // @abimethod({ readonly: true })
     txn OnCompletion
     !
@@ -103,8 +103,8 @@ main_getStreamInfo_route@10:
     intc_1 // 1
     return
 
-main_emergencyStop_route@9:
-    // smart_contracts/paypersec/contract.algo.ts:159
+main_emergencyStop_route@10:
+    // smart_contracts/paypersec/contract.algo.ts:168
     // @abimethod()
     txn OnCompletion
     !
@@ -115,8 +115,8 @@ main_emergencyStop_route@9:
     intc_1 // 1
     return
 
-main_updatePaymentRecipient_route@8:
-    // smart_contracts/paypersec/contract.algo.ts:150
+main_updatePaymentRecipient_route@9:
+    // smart_contracts/paypersec/contract.algo.ts:159
     // @abimethod()
     txn OnCompletion
     !
@@ -124,18 +124,18 @@ main_updatePaymentRecipient_route@8:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/paypersec/contract.algo.ts:16
-    // export class TapToStream extends Contract {
+    // export class tapToStream extends Contract {
     txna ApplicationArgs 1
     btoi
     txnas Accounts
-    // smart_contracts/paypersec/contract.algo.ts:150
+    // smart_contracts/paypersec/contract.algo.ts:159
     // @abimethod()
     callsub updatePaymentRecipient
     intc_1 // 1
     return
 
-main_stopStreaming_route@7:
-    // smart_contracts/paypersec/contract.algo.ts:127
+main_stopStreaming_route@8:
+    // smart_contracts/paypersec/contract.algo.ts:136
     // @abimethod()
     txn OnCompletion
     !
@@ -146,8 +146,8 @@ main_stopStreaming_route@7:
     intc_1 // 1
     return
 
-main_continueStreaming_route@6:
-    // smart_contracts/paypersec/contract.algo.ts:108
+main_continueStreaming_route@7:
+    // smart_contracts/paypersec/contract.algo.ts:117
     // @abimethod()
     txn OnCompletion
     !
@@ -155,7 +155,7 @@ main_continueStreaming_route@6:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/paypersec/contract.algo.ts:16
-    // export class TapToStream extends Contract {
+    // export class tapToStream extends Contract {
     txn GroupIndex
     intc_1 // 1
     -
@@ -164,14 +164,14 @@ main_continueStreaming_route@6:
     intc_1 // pay
     ==
     assert // transaction type is pay
-    // smart_contracts/paypersec/contract.algo.ts:108
+    // smart_contracts/paypersec/contract.algo.ts:117
     // @abimethod()
     callsub continueStreaming
     intc_1 // 1
     return
 
-main_processInterval_route@5:
-    // smart_contracts/paypersec/contract.algo.ts:77
+main_processInterval_route@6:
+    // smart_contracts/paypersec/contract.algo.ts:86
     // @abimethod()
     txn OnCompletion
     !
@@ -182,8 +182,8 @@ main_processInterval_route@5:
     intc_1 // 1
     return
 
-main_startStreaming_route@4:
-    // smart_contracts/paypersec/contract.algo.ts:57
+main_startStreaming_route@5:
+    // smart_contracts/paypersec/contract.algo.ts:66
     // @abimethod()
     txn OnCompletion
     !
@@ -191,7 +191,7 @@ main_startStreaming_route@4:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/paypersec/contract.algo.ts:16
-    // export class TapToStream extends Contract {
+    // export class tapToStream extends Contract {
     txn GroupIndex
     intc_1 // 1
     -
@@ -200,14 +200,14 @@ main_startStreaming_route@4:
     intc_1 // pay
     ==
     assert // transaction type is pay
-    // smart_contracts/paypersec/contract.algo.ts:57
+    // smart_contracts/paypersec/contract.algo.ts:66
     // @abimethod()
     callsub startStreaming
     intc_1 // 1
     return
 
-main_initializeStream_route@3:
-    // smart_contracts/paypersec/contract.algo.ts:39
+main_initializeStream_route@4:
+    // smart_contracts/paypersec/contract.algo.ts:48
     // @abimethod()
     txn OnCompletion
     !
@@ -215,24 +215,37 @@ main_initializeStream_route@3:
     txn ApplicationID
     assert // can only call when not creating
     // smart_contracts/paypersec/contract.algo.ts:16
-    // export class TapToStream extends Contract {
+    // export class tapToStream extends Contract {
     txna ApplicationArgs 1
     extract 2 0
     txna ApplicationArgs 2
     btoi
     txna ApplicationArgs 3
     btoi
-    // smart_contracts/paypersec/contract.algo.ts:39
+    // smart_contracts/paypersec/contract.algo.ts:48
     // @abimethod()
     callsub initializeStream
     intc_1 // 1
     return
 
-main_bare_routing@14:
-    // smart_contracts/paypersec/contract.algo.ts:16
-    // export class TapToStream extends Contract {
+main_optIn_route@3:
+    // smart_contracts/paypersec/contract.algo.ts:37
+    // @abimethod({allowActions:["OptIn"]})
     txn OnCompletion
-    bnz main_after_if_else@18
+    intc_1 // OptIn
+    ==
+    assert // OnCompletion is not OptIn
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub optIn
+    intc_1 // 1
+    return
+
+main_bare_routing@15:
+    // smart_contracts/paypersec/contract.algo.ts:16
+    // export class tapToStream extends Contract {
+    txn OnCompletion
+    bnz main_after_if_else@19
     txn ApplicationID
     !
     assert // can only call when creating
@@ -240,67 +253,112 @@ main_bare_routing@14:
     return
 
 
-// smart_contracts/paypersec/contract.algo.ts::TapToStream.initializeStream(title: bytes, duration: uint64, pricePerSecond: uint64) -> void:
+// smart_contracts/paypersec/contract.algo.ts::tapToStream.optIn() -> void:
+optIn:
+    // smart_contracts/paypersec/contract.algo.ts:39
+    // this.userHeldAmount(Txn.sender).value = 0;
+    txn Sender
+    // smart_contracts/paypersec/contract.algo.ts:31
+    // public userHeldAmount = LocalState<uint64>(); // Amount held for current 10-second interval
+    bytec_0 // "userHeldAmount"
+    // smart_contracts/paypersec/contract.algo.ts:39
+    // this.userHeldAmount(Txn.sender).value = 0;
+    intc_0 // 0
+    app_local_put
+    // smart_contracts/paypersec/contract.algo.ts:40
+    // this.userLastPaymentTime(Txn.sender).value = 0;
+    txn Sender
+    // smart_contracts/paypersec/contract.algo.ts:32
+    // public userLastPaymentTime = LocalState<uint64>(); // Last payment timestamp
+    bytec_2 // "userLastPaymentTime"
+    // smart_contracts/paypersec/contract.algo.ts:40
+    // this.userLastPaymentTime(Txn.sender).value = 0;
+    intc_0 // 0
+    app_local_put
+    // smart_contracts/paypersec/contract.algo.ts:41
+    // this.userTotalPaid(Txn.sender).value = 0;
+    txn Sender
+    // smart_contracts/paypersec/contract.algo.ts:33
+    // public userTotalPaid = LocalState<uint64>(); // Total amount paid by user
+    bytec 5 // "userTotalPaid"
+    // smart_contracts/paypersec/contract.algo.ts:41
+    // this.userTotalPaid(Txn.sender).value = 0;
+    intc_0 // 0
+    app_local_put
+    // smart_contracts/paypersec/contract.algo.ts:42
+    // this.userWatchStartTime(Txn.sender).value = 0;
+    txn Sender
+    // smart_contracts/paypersec/contract.algo.ts:34
+    // public userWatchStartTime = LocalState<uint64>(); // When user started watching
+    bytec_3 // "userWatchStartTime"
+    // smart_contracts/paypersec/contract.algo.ts:42
+    // this.userWatchStartTime(Txn.sender).value = 0;
+    intc_0 // 0
+    app_local_put
+    retsub
+
+
+// smart_contracts/paypersec/contract.algo.ts::tapToStream.initializeStream(title: bytes, duration: uint64, pricePerSecond: uint64) -> void:
 initializeStream:
-    // smart_contracts/paypersec/contract.algo.ts:39-40
+    // smart_contracts/paypersec/contract.algo.ts:48-49
     // @abimethod()
     // public initializeStream(title: string, duration: uint64, pricePerSecond: uint64): void {
     proto 3 0
     // smart_contracts/paypersec/contract.algo.ts:21
     // public streamOwner = GlobalState<Account>();
-    bytec 6 // "streamOwner"
-    // smart_contracts/paypersec/contract.algo.ts:41
+    bytec 7 // "streamOwner"
+    // smart_contracts/paypersec/contract.algo.ts:50
     // this.streamOwner.value = Txn.sender;
     txn Sender
     app_global_put
     // smart_contracts/paypersec/contract.algo.ts:22
     // public streamTitle = GlobalState<string>();
     bytec 10 // "streamTitle"
-    // smart_contracts/paypersec/contract.algo.ts:42
+    // smart_contracts/paypersec/contract.algo.ts:51
     // this.streamTitle.value = title;
     frame_dig -3
     app_global_put
     // smart_contracts/paypersec/contract.algo.ts:23
     // public streamDuration = GlobalState<uint64>(); // in seconds
     bytec 11 // "streamDuration"
-    // smart_contracts/paypersec/contract.algo.ts:43
+    // smart_contracts/paypersec/contract.algo.ts:52
     // this.streamDuration.value = duration;
     frame_dig -2
     app_global_put
     // smart_contracts/paypersec/contract.algo.ts:24
     // public pricePerSecond = GlobalState<uint64>(); // in microAlgos
-    bytec_2 // "pricePerSecond"
-    // smart_contracts/paypersec/contract.algo.ts:44
+    bytec 4 // "pricePerSecond"
+    // smart_contracts/paypersec/contract.algo.ts:53
     // this.pricePerSecond.value = pricePerSecond;
     frame_dig -1
     app_global_put
     // smart_contracts/paypersec/contract.algo.ts:25
     // public streamActive = GlobalState<boolean>();
     bytec_1 // "streamActive"
-    // smart_contracts/paypersec/contract.algo.ts:45
+    // smart_contracts/paypersec/contract.algo.ts:54
     // this.streamActive.value = true;
     intc_1 // 1
     app_global_put
     // smart_contracts/paypersec/contract.algo.ts:28
     // public totalEarnings = GlobalState<uint64>();
-    bytec_3 // "totalEarnings"
-    // smart_contracts/paypersec/contract.algo.ts:46
+    bytec 6 // "totalEarnings"
+    // smart_contracts/paypersec/contract.algo.ts:55
     // this.totalEarnings.value = 0;
     intc_0 // 0
     app_global_put
     // smart_contracts/paypersec/contract.algo.ts:18
     // public paymentRecipient = GlobalState<Account>();
-    bytec 7 // "paymentRecipient"
-    // smart_contracts/paypersec/contract.algo.ts:51
+    bytec 8 // "paymentRecipient"
+    // smart_contracts/paypersec/contract.algo.ts:60
     // this.paymentRecipient.value = Txn.sender;
     txn Sender
     app_global_put
     retsub
 
 
-// smart_contracts/paypersec/contract.algo.ts::TapToStream.startStreaming(payment: uint64) -> void:
+// smart_contracts/paypersec/contract.algo.ts::tapToStream.startStreaming(payment: uint64) -> void:
 startStreaming:
-    // smart_contracts/paypersec/contract.algo.ts:57-58
+    // smart_contracts/paypersec/contract.algo.ts:66-67
     // @abimethod()
     // public startStreaming(payment: gtxn.PaymentTxn): void {
     proto 1 0
@@ -310,67 +368,67 @@ startStreaming:
     bytec_1 // "streamActive"
     app_global_get_ex
     assert // check GlobalState exists
-    // smart_contracts/paypersec/contract.algo.ts:59
+    // smart_contracts/paypersec/contract.algo.ts:68
     // assert(this.streamActive.value, "Stream not active");
     assert // Stream not active
     // smart_contracts/paypersec/contract.algo.ts:24
     // public pricePerSecond = GlobalState<uint64>(); // in microAlgos
     intc_0 // 0
-    bytec_2 // "pricePerSecond"
+    bytec 4 // "pricePerSecond"
     app_global_get_ex
     assert // check GlobalState exists
-    // smart_contracts/paypersec/contract.algo.ts:62
+    // smart_contracts/paypersec/contract.algo.ts:71
     // const tenSecondCost = (this.pricePerSecond.value * 10) as uint64;
     intc_2 // 10
     *
-    // smart_contracts/paypersec/contract.algo.ts:65
+    // smart_contracts/paypersec/contract.algo.ts:74
     // assert(payment.receiver === Global.currentApplicationAddress, "Payment must be to app");
     frame_dig -1
     gtxns Receiver
     global CurrentApplicationAddress
     ==
     assert // Payment must be to app
-    // smart_contracts/paypersec/contract.algo.ts:66
+    // smart_contracts/paypersec/contract.algo.ts:75
     // assert(payment.amount >= tenSecondCost, "Insufficient payment for 10-second interval");
     frame_dig -1
     gtxns Amount
     dig 1
     >=
     assert // Insufficient payment for 10-second interval
-    // smart_contracts/paypersec/contract.algo.ts:69
+    // smart_contracts/paypersec/contract.algo.ts:78
     // this.userHeldAmount(Txn.sender).value = tenSecondCost;
     txn Sender
     // smart_contracts/paypersec/contract.algo.ts:31
     // public userHeldAmount = LocalState<uint64>(); // Amount held for current 10-second interval
     bytec_0 // "userHeldAmount"
-    // smart_contracts/paypersec/contract.algo.ts:69
+    // smart_contracts/paypersec/contract.algo.ts:78
     // this.userHeldAmount(Txn.sender).value = tenSecondCost;
     uncover 2
     app_local_put
-    // smart_contracts/paypersec/contract.algo.ts:70
+    // smart_contracts/paypersec/contract.algo.ts:79
     // this.userWatchStartTime(Txn.sender).value = Global.latestTimestamp;
     txn Sender
     // smart_contracts/paypersec/contract.algo.ts:34
     // public userWatchStartTime = LocalState<uint64>(); // When user started watching
-    bytec 4 // "userWatchStartTime"
-    // smart_contracts/paypersec/contract.algo.ts:70
+    bytec_3 // "userWatchStartTime"
+    // smart_contracts/paypersec/contract.algo.ts:79
     // this.userWatchStartTime(Txn.sender).value = Global.latestTimestamp;
     global LatestTimestamp
     app_local_put
-    // smart_contracts/paypersec/contract.algo.ts:71
+    // smart_contracts/paypersec/contract.algo.ts:80
     // this.userLastPaymentTime(Txn.sender).value = Global.latestTimestamp;
     txn Sender
     // smart_contracts/paypersec/contract.algo.ts:32
     // public userLastPaymentTime = LocalState<uint64>(); // Last payment timestamp
-    bytec 5 // "userLastPaymentTime"
-    // smart_contracts/paypersec/contract.algo.ts:71
+    bytec_2 // "userLastPaymentTime"
+    // smart_contracts/paypersec/contract.algo.ts:80
     // this.userLastPaymentTime(Txn.sender).value = Global.latestTimestamp;
     global LatestTimestamp
     app_local_put
     retsub
 
 
-// smart_contracts/paypersec/contract.algo.ts::TapToStream.processInterval() -> void:
+// smart_contracts/paypersec/contract.algo.ts::tapToStream.processInterval() -> void:
 processInterval:
     // smart_contracts/paypersec/contract.algo.ts:25
     // public streamActive = GlobalState<boolean>();
@@ -378,36 +436,36 @@ processInterval:
     bytec_1 // "streamActive"
     app_global_get_ex
     assert // check GlobalState exists
-    // smart_contracts/paypersec/contract.algo.ts:79
+    // smart_contracts/paypersec/contract.algo.ts:88
     // assert(this.streamActive.value, "Stream not active");
     assert // Stream not active
-    // smart_contracts/paypersec/contract.algo.ts:81
+    // smart_contracts/paypersec/contract.algo.ts:90
     // const heldAmount = this.userHeldAmount(Txn.sender).value;
     txn Sender
     intc_0 // 0
     // smart_contracts/paypersec/contract.algo.ts:31
     // public userHeldAmount = LocalState<uint64>(); // Amount held for current 10-second interval
     bytec_0 // "userHeldAmount"
-    // smart_contracts/paypersec/contract.algo.ts:81
+    // smart_contracts/paypersec/contract.algo.ts:90
     // const heldAmount = this.userHeldAmount(Txn.sender).value;
     app_local_get_ex
     assert // check LocalState exists
-    // smart_contracts/paypersec/contract.algo.ts:82
+    // smart_contracts/paypersec/contract.algo.ts:91
     // const lastPaymentTime = this.userLastPaymentTime(Txn.sender).value;
     txn Sender
     intc_0 // 0
     // smart_contracts/paypersec/contract.algo.ts:32
     // public userLastPaymentTime = LocalState<uint64>(); // Last payment timestamp
-    bytec 5 // "userLastPaymentTime"
-    // smart_contracts/paypersec/contract.algo.ts:82
+    bytec_2 // "userLastPaymentTime"
+    // smart_contracts/paypersec/contract.algo.ts:91
     // const lastPaymentTime = this.userLastPaymentTime(Txn.sender).value;
     app_local_get_ex
     assert // check LocalState exists
-    // smart_contracts/paypersec/contract.algo.ts:84
+    // smart_contracts/paypersec/contract.algo.ts:93
     // assert(heldAmount > 0, "No held amount to process");
     dig 1
     assert // No held amount to process
-    // smart_contracts/paypersec/contract.algo.ts:85
+    // smart_contracts/paypersec/contract.algo.ts:94
     // assert(Global.latestTimestamp >= lastPaymentTime + 10, "Interval not complete yet");
     global LatestTimestamp
     swap
@@ -415,7 +473,7 @@ processInterval:
     +
     >=
     assert // Interval not complete yet
-    // smart_contracts/paypersec/contract.algo.ts:88-94
+    // smart_contracts/paypersec/contract.algo.ts:97-103
     // itxn
     //   .payment({
     //     receiver: this.paymentRecipient.value,
@@ -427,13 +485,13 @@ processInterval:
     // smart_contracts/paypersec/contract.algo.ts:18
     // public paymentRecipient = GlobalState<Account>();
     intc_0 // 0
-    bytec 7 // "paymentRecipient"
+    bytec 8 // "paymentRecipient"
     app_global_get_ex
     assert // check GlobalState exists
     dig 1
     itxn_field Amount
     itxn_field Receiver
-    // smart_contracts/paypersec/contract.algo.ts:88-93
+    // smart_contracts/paypersec/contract.algo.ts:97-102
     // itxn
     //   .payment({
     //     receiver: this.paymentRecipient.value,
@@ -442,11 +500,11 @@ processInterval:
     //   })
     intc_1 // 1
     itxn_field TypeEnum
-    // smart_contracts/paypersec/contract.algo.ts:92
+    // smart_contracts/paypersec/contract.algo.ts:101
     // fee: 0,
     intc_0 // 0
     itxn_field Fee
-    // smart_contracts/paypersec/contract.algo.ts:88-94
+    // smart_contracts/paypersec/contract.algo.ts:97-103
     // itxn
     //   .payment({
     //     receiver: this.paymentRecipient.value,
@@ -458,28 +516,28 @@ processInterval:
     // smart_contracts/paypersec/contract.algo.ts:28
     // public totalEarnings = GlobalState<uint64>();
     intc_0 // 0
-    bytec_3 // "totalEarnings"
+    bytec 6 // "totalEarnings"
     app_global_get_ex
     assert // check GlobalState exists
-    // smart_contracts/paypersec/contract.algo.ts:97
+    // smart_contracts/paypersec/contract.algo.ts:106
     // this.totalEarnings.value = (this.totalEarnings.value + heldAmount) as uint64;
     dig 1
     +
     // smart_contracts/paypersec/contract.algo.ts:28
     // public totalEarnings = GlobalState<uint64>();
-    bytec_3 // "totalEarnings"
-    // smart_contracts/paypersec/contract.algo.ts:97
+    bytec 6 // "totalEarnings"
+    // smart_contracts/paypersec/contract.algo.ts:106
     // this.totalEarnings.value = (this.totalEarnings.value + heldAmount) as uint64;
     swap
     app_global_put
-    // smart_contracts/paypersec/contract.algo.ts:98
+    // smart_contracts/paypersec/contract.algo.ts:107
     // this.userTotalPaid(Txn.sender).value = (this.userTotalPaid(Txn.sender).value + heldAmount) as uint64;
     txn Sender
     intc_0 // 0
     // smart_contracts/paypersec/contract.algo.ts:33
     // public userTotalPaid = LocalState<uint64>(); // Total amount paid by user
-    bytec 8 // "userTotalPaid"
-    // smart_contracts/paypersec/contract.algo.ts:98
+    bytec 5 // "userTotalPaid"
+    // smart_contracts/paypersec/contract.algo.ts:107
     // this.userTotalPaid(Txn.sender).value = (this.userTotalPaid(Txn.sender).value + heldAmount) as uint64;
     app_local_get_ex
     assert // check LocalState exists
@@ -489,37 +547,37 @@ processInterval:
     +
     // smart_contracts/paypersec/contract.algo.ts:33
     // public userTotalPaid = LocalState<uint64>(); // Total amount paid by user
-    bytec 8 // "userTotalPaid"
-    // smart_contracts/paypersec/contract.algo.ts:98
+    bytec 5 // "userTotalPaid"
+    // smart_contracts/paypersec/contract.algo.ts:107
     // this.userTotalPaid(Txn.sender).value = (this.userTotalPaid(Txn.sender).value + heldAmount) as uint64;
     swap
     app_local_put
-    // smart_contracts/paypersec/contract.algo.ts:99
+    // smart_contracts/paypersec/contract.algo.ts:108
     // this.userLastPaymentTime(Txn.sender).value = Global.latestTimestamp;
     txn Sender
     // smart_contracts/paypersec/contract.algo.ts:32
     // public userLastPaymentTime = LocalState<uint64>(); // Last payment timestamp
-    bytec 5 // "userLastPaymentTime"
-    // smart_contracts/paypersec/contract.algo.ts:99
+    bytec_2 // "userLastPaymentTime"
+    // smart_contracts/paypersec/contract.algo.ts:108
     // this.userLastPaymentTime(Txn.sender).value = Global.latestTimestamp;
     global LatestTimestamp
     app_local_put
-    // smart_contracts/paypersec/contract.algo.ts:102
+    // smart_contracts/paypersec/contract.algo.ts:111
     // this.userHeldAmount(Txn.sender).value = 0;
     txn Sender
     // smart_contracts/paypersec/contract.algo.ts:31
     // public userHeldAmount = LocalState<uint64>(); // Amount held for current 10-second interval
     bytec_0 // "userHeldAmount"
-    // smart_contracts/paypersec/contract.algo.ts:102
+    // smart_contracts/paypersec/contract.algo.ts:111
     // this.userHeldAmount(Txn.sender).value = 0;
     intc_0 // 0
     app_local_put
     retsub
 
 
-// smart_contracts/paypersec/contract.algo.ts::TapToStream.continueStreaming(payment: uint64) -> void:
+// smart_contracts/paypersec/contract.algo.ts::tapToStream.continueStreaming(payment: uint64) -> void:
 continueStreaming:
-    // smart_contracts/paypersec/contract.algo.ts:108-109
+    // smart_contracts/paypersec/contract.algo.ts:117-118
     // @abimethod()
     // public continueStreaming(payment: gtxn.PaymentTxn): void {
     proto 1 0
@@ -529,17 +587,17 @@ continueStreaming:
     bytec_1 // "streamActive"
     app_global_get_ex
     assert // check GlobalState exists
-    // smart_contracts/paypersec/contract.algo.ts:110
+    // smart_contracts/paypersec/contract.algo.ts:119
     // assert(this.streamActive.value, "Stream not active");
     assert // Stream not active
-    // smart_contracts/paypersec/contract.algo.ts:111
+    // smart_contracts/paypersec/contract.algo.ts:120
     // assert(this.userWatchStartTime(Txn.sender).value > 0, "Must start streaming first");
     txn Sender
     intc_0 // 0
     // smart_contracts/paypersec/contract.algo.ts:34
     // public userWatchStartTime = LocalState<uint64>(); // When user started watching
-    bytec 4 // "userWatchStartTime"
-    // smart_contracts/paypersec/contract.algo.ts:111
+    bytec_3 // "userWatchStartTime"
+    // smart_contracts/paypersec/contract.algo.ts:120
     // assert(this.userWatchStartTime(Txn.sender).value > 0, "Must start streaming first");
     app_local_get_ex
     assert // check LocalState exists
@@ -547,64 +605,64 @@ continueStreaming:
     // smart_contracts/paypersec/contract.algo.ts:24
     // public pricePerSecond = GlobalState<uint64>(); // in microAlgos
     intc_0 // 0
-    bytec_2 // "pricePerSecond"
+    bytec 4 // "pricePerSecond"
     app_global_get_ex
     assert // check GlobalState exists
-    // smart_contracts/paypersec/contract.algo.ts:114
+    // smart_contracts/paypersec/contract.algo.ts:123
     // const tenSecondCost = (this.pricePerSecond.value * 10) as uint64;
     intc_2 // 10
     *
-    // smart_contracts/paypersec/contract.algo.ts:117
+    // smart_contracts/paypersec/contract.algo.ts:126
     // assert(payment.receiver === Global.currentApplicationAddress, "Payment must be to app");
     frame_dig -1
     gtxns Receiver
     global CurrentApplicationAddress
     ==
     assert // Payment must be to app
-    // smart_contracts/paypersec/contract.algo.ts:118
+    // smart_contracts/paypersec/contract.algo.ts:127
     // assert(payment.amount >= tenSecondCost, "Insufficient payment for 10-second interval");
     frame_dig -1
     gtxns Amount
     dig 1
     >=
     assert // Insufficient payment for 10-second interval
-    // smart_contracts/paypersec/contract.algo.ts:121
+    // smart_contracts/paypersec/contract.algo.ts:130
     // this.userHeldAmount(Txn.sender).value = tenSecondCost;
     txn Sender
     // smart_contracts/paypersec/contract.algo.ts:31
     // public userHeldAmount = LocalState<uint64>(); // Amount held for current 10-second interval
     bytec_0 // "userHeldAmount"
-    // smart_contracts/paypersec/contract.algo.ts:121
+    // smart_contracts/paypersec/contract.algo.ts:130
     // this.userHeldAmount(Txn.sender).value = tenSecondCost;
     uncover 2
     app_local_put
     retsub
 
 
-// smart_contracts/paypersec/contract.algo.ts::TapToStream.stopStreaming() -> void:
+// smart_contracts/paypersec/contract.algo.ts::tapToStream.stopStreaming() -> void:
 stopStreaming:
-    // smart_contracts/paypersec/contract.algo.ts:127-128
+    // smart_contracts/paypersec/contract.algo.ts:136-137
     // @abimethod()
     // public stopStreaming(): void {
     proto 0 0
-    // smart_contracts/paypersec/contract.algo.ts:129
+    // smart_contracts/paypersec/contract.algo.ts:138
     // const heldAmount = this.userHeldAmount(Txn.sender).value;
     txn Sender
     intc_0 // 0
     // smart_contracts/paypersec/contract.algo.ts:31
     // public userHeldAmount = LocalState<uint64>(); // Amount held for current 10-second interval
     bytec_0 // "userHeldAmount"
-    // smart_contracts/paypersec/contract.algo.ts:129
+    // smart_contracts/paypersec/contract.algo.ts:138
     // const heldAmount = this.userHeldAmount(Txn.sender).value;
     app_local_get_ex
     swap
     dup
     uncover 2
     assert // check LocalState exists
-    // smart_contracts/paypersec/contract.algo.ts:131
+    // smart_contracts/paypersec/contract.algo.ts:140
     // if (heldAmount > 0) {
     bz stopStreaming_after_if_else@3
-    // smart_contracts/paypersec/contract.algo.ts:133-139
+    // smart_contracts/paypersec/contract.algo.ts:142-148
     // itxn
     //   .payment({
     //     receiver: Txn.sender,
@@ -613,13 +671,13 @@ stopStreaming:
     //   })
     //   .submit();
     itxn_begin
-    // smart_contracts/paypersec/contract.algo.ts:135
+    // smart_contracts/paypersec/contract.algo.ts:144
     // receiver: Txn.sender,
     txn Sender
     frame_dig 0
     itxn_field Amount
     itxn_field Receiver
-    // smart_contracts/paypersec/contract.algo.ts:133-138
+    // smart_contracts/paypersec/contract.algo.ts:142-147
     // itxn
     //   .payment({
     //     receiver: Txn.sender,
@@ -628,11 +686,11 @@ stopStreaming:
     //   })
     intc_1 // 1
     itxn_field TypeEnum
-    // smart_contracts/paypersec/contract.algo.ts:137
+    // smart_contracts/paypersec/contract.algo.ts:146
     // fee: 0,
     intc_0 // 0
     itxn_field Fee
-    // smart_contracts/paypersec/contract.algo.ts:133-139
+    // smart_contracts/paypersec/contract.algo.ts:142-148
     // itxn
     //   .payment({
     //     receiver: Txn.sender,
@@ -643,84 +701,84 @@ stopStreaming:
     itxn_submit
 
 stopStreaming_after_if_else@3:
-    // smart_contracts/paypersec/contract.algo.ts:143
+    // smart_contracts/paypersec/contract.algo.ts:152
     // this.userHeldAmount(Txn.sender).value = 0;
     txn Sender
     // smart_contracts/paypersec/contract.algo.ts:31
     // public userHeldAmount = LocalState<uint64>(); // Amount held for current 10-second interval
     bytec_0 // "userHeldAmount"
-    // smart_contracts/paypersec/contract.algo.ts:143
+    // smart_contracts/paypersec/contract.algo.ts:152
     // this.userHeldAmount(Txn.sender).value = 0;
     intc_0 // 0
     app_local_put
-    // smart_contracts/paypersec/contract.algo.ts:144
+    // smart_contracts/paypersec/contract.algo.ts:153
     // this.userWatchStartTime(Txn.sender).value = 0;
     txn Sender
     // smart_contracts/paypersec/contract.algo.ts:34
     // public userWatchStartTime = LocalState<uint64>(); // When user started watching
-    bytec 4 // "userWatchStartTime"
-    // smart_contracts/paypersec/contract.algo.ts:144
+    bytec_3 // "userWatchStartTime"
+    // smart_contracts/paypersec/contract.algo.ts:153
     // this.userWatchStartTime(Txn.sender).value = 0;
     intc_0 // 0
     app_local_put
     retsub
 
 
-// smart_contracts/paypersec/contract.algo.ts::TapToStream.updatePaymentRecipient(newRecipient: bytes) -> void:
+// smart_contracts/paypersec/contract.algo.ts::tapToStream.updatePaymentRecipient(newRecipient: bytes) -> void:
 updatePaymentRecipient:
-    // smart_contracts/paypersec/contract.algo.ts:150-151
+    // smart_contracts/paypersec/contract.algo.ts:159-160
     // @abimethod()
     // public updatePaymentRecipient(newRecipient: Account): void {
     proto 1 0
-    // smart_contracts/paypersec/contract.algo.ts:152
+    // smart_contracts/paypersec/contract.algo.ts:161
     // assert(Txn.sender === this.streamOwner.value, "Only owner can update recipient");
     txn Sender
     // smart_contracts/paypersec/contract.algo.ts:21
     // public streamOwner = GlobalState<Account>();
     intc_0 // 0
-    bytec 6 // "streamOwner"
+    bytec 7 // "streamOwner"
     app_global_get_ex
     assert // check GlobalState exists
-    // smart_contracts/paypersec/contract.algo.ts:152
+    // smart_contracts/paypersec/contract.algo.ts:161
     // assert(Txn.sender === this.streamOwner.value, "Only owner can update recipient");
     ==
     assert // Only owner can update recipient
     // smart_contracts/paypersec/contract.algo.ts:18
     // public paymentRecipient = GlobalState<Account>();
-    bytec 7 // "paymentRecipient"
-    // smart_contracts/paypersec/contract.algo.ts:153
+    bytec 8 // "paymentRecipient"
+    // smart_contracts/paypersec/contract.algo.ts:162
     // this.paymentRecipient.value = newRecipient;
     frame_dig -1
     app_global_put
     retsub
 
 
-// smart_contracts/paypersec/contract.algo.ts::TapToStream.emergencyStop() -> void:
+// smart_contracts/paypersec/contract.algo.ts::tapToStream.emergencyStop() -> void:
 emergencyStop:
-    // smart_contracts/paypersec/contract.algo.ts:161
+    // smart_contracts/paypersec/contract.algo.ts:170
     // assert(Txn.sender === this.streamOwner.value, "Only owner can emergency stop");
     txn Sender
     // smart_contracts/paypersec/contract.algo.ts:21
     // public streamOwner = GlobalState<Account>();
     intc_0 // 0
-    bytec 6 // "streamOwner"
+    bytec 7 // "streamOwner"
     app_global_get_ex
     assert // check GlobalState exists
-    // smart_contracts/paypersec/contract.algo.ts:161
+    // smart_contracts/paypersec/contract.algo.ts:170
     // assert(Txn.sender === this.streamOwner.value, "Only owner can emergency stop");
     ==
     assert // Only owner can emergency stop
     // smart_contracts/paypersec/contract.algo.ts:25
     // public streamActive = GlobalState<boolean>();
     bytec_1 // "streamActive"
-    // smart_contracts/paypersec/contract.algo.ts:162
+    // smart_contracts/paypersec/contract.algo.ts:171
     // this.streamActive.value = false;
     intc_0 // 0
     app_global_put
     retsub
 
 
-// smart_contracts/paypersec/contract.algo.ts::TapToStream.getStreamInfo() -> bytes, uint64, uint64, uint64, uint64, uint64:
+// smart_contracts/paypersec/contract.algo.ts::tapToStream.getStreamInfo() -> bytes, uint64, uint64, uint64, uint64, uint64:
 getStreamInfo:
     // smart_contracts/paypersec/contract.algo.ts:22
     // public streamTitle = GlobalState<string>();
@@ -737,21 +795,21 @@ getStreamInfo:
     // smart_contracts/paypersec/contract.algo.ts:24
     // public pricePerSecond = GlobalState<uint64>(); // in microAlgos
     intc_0 // 0
-    bytec_2 // "pricePerSecond"
+    bytec 4 // "pricePerSecond"
     app_global_get_ex
     assert // check GlobalState exists
     intc_0 // 0
-    bytec_2 // "pricePerSecond"
+    bytec 4 // "pricePerSecond"
     app_global_get_ex
     assert // check GlobalState exists
-    // smart_contracts/paypersec/contract.algo.ts:181
+    // smart_contracts/paypersec/contract.algo.ts:190
     // tenSecondCost: (this.pricePerSecond.value * 10) as uint64,
     intc_2 // 10
     *
     // smart_contracts/paypersec/contract.algo.ts:28
     // public totalEarnings = GlobalState<uint64>();
     intc_0 // 0
-    bytec_3 // "totalEarnings"
+    bytec 6 // "totalEarnings"
     app_global_get_ex
     assert // check GlobalState exists
     // smart_contracts/paypersec/contract.algo.ts:25
@@ -760,7 +818,7 @@ getStreamInfo:
     bytec_1 // "streamActive"
     app_global_get_ex
     assert // check GlobalState exists
-    // smart_contracts/paypersec/contract.algo.ts:177-184
+    // smart_contracts/paypersec/contract.algo.ts:186-193
     // return {
     //   title: this.streamTitle.value,
     //   duration: this.streamDuration.value,
@@ -772,9 +830,9 @@ getStreamInfo:
     retsub
 
 
-// smart_contracts/paypersec/contract.algo.ts::TapToStream.getUserStreamingInfo() -> uint64, uint64, uint64, uint64, uint64:
+// smart_contracts/paypersec/contract.algo.ts::tapToStream.getUserStreamingInfo() -> uint64, uint64, uint64, uint64, uint64:
 getUserStreamingInfo:
-    // smart_contracts/paypersec/contract.algo.ts:190-197
+    // smart_contracts/paypersec/contract.algo.ts:199-206
     // @abimethod({ readonly: true })
     // public getUserStreamingInfo(): {
     //   heldAmount: uint64;
@@ -784,21 +842,21 @@ getUserStreamingInfo:
     //   canProcessInterval: boolean;
     // } {
     proto 0 5
-    // smart_contracts/paypersec/contract.algo.ts:198
+    // smart_contracts/paypersec/contract.algo.ts:207
     // const lastPaymentTime = this.userLastPaymentTime(Txn.sender).value;
     txn Sender
     intc_0 // 0
     // smart_contracts/paypersec/contract.algo.ts:32
     // public userLastPaymentTime = LocalState<uint64>(); // Last payment timestamp
-    bytec 5 // "userLastPaymentTime"
-    // smart_contracts/paypersec/contract.algo.ts:198
+    bytec_2 // "userLastPaymentTime"
+    // smart_contracts/paypersec/contract.algo.ts:207
     // const lastPaymentTime = this.userLastPaymentTime(Txn.sender).value;
     app_local_get_ex
     swap
     dup
     uncover 2
     assert // check LocalState exists
-    // smart_contracts/paypersec/contract.algo.ts:199
+    // smart_contracts/paypersec/contract.algo.ts:208
     // const canProcess = lastPaymentTime > 0 && Global.latestTimestamp >= lastPaymentTime + 10;
     bz getUserStreamingInfo_bool_false@3
     global LatestTimestamp
@@ -810,40 +868,40 @@ getUserStreamingInfo:
     intc_1 // 1
 
 getUserStreamingInfo_bool_merge@4:
-    // smart_contracts/paypersec/contract.algo.ts:202
+    // smart_contracts/paypersec/contract.algo.ts:211
     // heldAmount: this.userHeldAmount(Txn.sender).value,
     txn Sender
     intc_0 // 0
     // smart_contracts/paypersec/contract.algo.ts:31
     // public userHeldAmount = LocalState<uint64>(); // Amount held for current 10-second interval
     bytec_0 // "userHeldAmount"
-    // smart_contracts/paypersec/contract.algo.ts:202
+    // smart_contracts/paypersec/contract.algo.ts:211
     // heldAmount: this.userHeldAmount(Txn.sender).value,
     app_local_get_ex
     assert // check LocalState exists
-    // smart_contracts/paypersec/contract.algo.ts:204
+    // smart_contracts/paypersec/contract.algo.ts:213
     // totalPaid: this.userTotalPaid(Txn.sender).value,
     txn Sender
     intc_0 // 0
     // smart_contracts/paypersec/contract.algo.ts:33
     // public userTotalPaid = LocalState<uint64>(); // Total amount paid by user
-    bytec 8 // "userTotalPaid"
-    // smart_contracts/paypersec/contract.algo.ts:204
+    bytec 5 // "userTotalPaid"
+    // smart_contracts/paypersec/contract.algo.ts:213
     // totalPaid: this.userTotalPaid(Txn.sender).value,
     app_local_get_ex
     assert // check LocalState exists
-    // smart_contracts/paypersec/contract.algo.ts:205
+    // smart_contracts/paypersec/contract.algo.ts:214
     // watchStartTime: this.userWatchStartTime(Txn.sender).value,
     txn Sender
     intc_0 // 0
     // smart_contracts/paypersec/contract.algo.ts:34
     // public userWatchStartTime = LocalState<uint64>(); // When user started watching
-    bytec 4 // "userWatchStartTime"
-    // smart_contracts/paypersec/contract.algo.ts:205
+    bytec_3 // "userWatchStartTime"
+    // smart_contracts/paypersec/contract.algo.ts:214
     // watchStartTime: this.userWatchStartTime(Txn.sender).value,
     app_local_get_ex
     assert // check LocalState exists
-    // smart_contracts/paypersec/contract.algo.ts:201-207
+    // smart_contracts/paypersec/contract.algo.ts:210-216
     // return {
     //   heldAmount: this.userHeldAmount(Txn.sender).value,
     //   lastPaymentTime: lastPaymentTime,
